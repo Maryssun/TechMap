@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f172a" />
+  <title>TechMap | Detalhe da Área</title>
+
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="../index.html" class="brand">
+        <span class="brand-mark">TechMap</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="primary-nav">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="./discover.html">Descobrir</a></li>
+          <li><a href="./career-areas.html">Áreas</a></li>
+          <li><a href="./study-guide.html">Estudos</a></li>
+          <li><a href="./communities.html">Comunidades</a></li>
+          <li><a href="./about.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO DINÂMICO -->
+    <section class="hero-section">
+      <div class="container">
+        <div id="area-header" class="content-medium"></div>
+      </div>
+    </section>
+
+    <!-- CONTEÚDO -->
+    <section>
+      <div class="container">
+
+        <div class="grid-2">
+
+          <div>
+            <h3>Perfil mais comum</h3>
+            <ul id="perfil"></ul>
+
+            <h3 style="margin-top: 24px;">Primeiros passos</h3>
+            <ul id="passos"></ul>
+          </div>
+
+          <div>
+            <h3>Ferramentas</h3>
+            <div id="ferramentas" class="inline-actions"></div>
+
+            <h3 style="margin-top: 24px;">Possíveis cargos</h3>
+            <ul id="cargos"></ul>
+          </div>
+
+        </div>
+
+        <div style="margin-top: 40px;">
+          <h3>O que estudar</h3>
+          <ul id="estudos"></ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container cta-box">
+        <div>
+          <span class="section-kicker">Próximo passo</span>
+          <h2>Agora conecte essa área com estudo e prática.</h2>
+          <p>Veja como estruturar seu aprendizado de forma mais estratégica.</p>
+        </div>
+        <a class="btn btn-primary" href="./study-guide.html">Ver estudos</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>TechMap</strong>
+        <p>Conectando você a caminhos reais na tecnologia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data-loader.js"></script>
+  <script src="../assets/js/app.js"></script>
+
+  <!-- SCRIPT DINÂMICO -->
+  <script>
+    document.addEventListener("DOMContentLoaded", initDetailPage);
+
+    async function initDetailPage() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      if (!id) {
+        renderError("Área não encontrada.");
+        return;
+      }
+
+      const areas = await DataLoader.loadAreas();
+
+      if (!areas) {
+        renderError("Erro ao carregar dados.");
+        return;
+      }
+
+      const area = areas.find(a => a.id === id);
+
+      if (!area) {
+        renderError("Área não encontrada.");
+        return;
+      }
+
+      renderArea(area);
+    }
+
+    function renderArea(area) {
+      // HEADER
+      const header = document.getElementById("area-header");
+
+      header.innerHTML = `
+        <span class="section-kicker">Área da tecnologia</span>
+        <h1>${safe(area.nome)}</h1>
+        <p>${safe(area.descricao)}</p>
+      `;
+
+      renderList("perfil", area.perfil);
+      renderList("passos", area.primeiros_passos);
+      renderList("cargos", area.cargos_iniciais);
+      renderList("estudos", area.estudos_recomendados);
+      renderTags("ferramentas", area.ferramentas);
+    }
+
+    function renderList(id, items) {
+      const container = document.getElementById(id);
+      container.innerHTML = "";
+
+      if (!items || items.length === 0) return;
+
+      items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = safe(item);
+        container.appendChild(li);
+      });
+    }
+
+    function renderTags(id, items) {
+      const container = document.getElementById(id);
+      container.innerHTML = "";
+
+      if (!items) return;
+
+      items.forEach(item => {
+        const span = document.createElement("span");
+        span.className = "pill";
+        span.textContent = safe(item);
+        container.appendChild(span);
+      });
+    }
+
+    function renderError(message) {
+      const main = document.getElementById("main-content");
+      main.innerHTML = `
+        <section class="container">
+          <div class="empty-state">${message}</div>
+        </section>
+      `;
+    }
+
+    function safe(value) {
+      return value ? String(value) : "";
+    }
+  </script>
+
+</body>
+</html>

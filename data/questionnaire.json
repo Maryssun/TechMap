@@ -1,0 +1,277 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "pergunta": "Que tipo de atividade costuma chamar mais sua atenção?",
+      "opcoes": [
+        {
+          "texto": "Resolver problemas com lógica e construir soluções passo a passo",
+          "peso": {
+            "desenvolvimento": 3,
+            "cloud": 1,
+            "ia": 1
+          }
+        },
+        {
+          "texto": "Analisar informações, padrões e dados para entender cenários",
+          "peso": {
+            "dados": 3,
+            "ia": 2,
+            "governanca": 1
+          }
+        },
+        {
+          "texto": "Organizar pessoas, processos, prioridades e formas de trabalho",
+          "peso": {
+            "agilidade": 3,
+            "governanca": 2
+          }
+        },
+        {
+          "texto": "Entender comportamento, experiência e clareza para o usuário",
+          "peso": {
+            "ux": 3,
+            "agilidade": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "pergunta": "Quando você aprende algo novo, o que mais te motiva?",
+      "opcoes": [
+        {
+          "texto": "Ver como aquilo funciona por dentro e testar tecnicamente",
+          "peso": {
+            "desenvolvimento": 2,
+            "cloud": 2,
+            "ciberseguranca": 1
+          }
+        },
+        {
+          "texto": "Entender como aquilo pode gerar inteligência e decisão",
+          "peso": {
+            "dados": 3,
+            "ia": 2
+          }
+        },
+        {
+          "texto": "Ver como isso melhora organização, fluxo e colaboração",
+          "peso": {
+            "agilidade": 2,
+            "governanca": 3
+          }
+        },
+        {
+          "texto": "Perceber como isso impacta pessoas e melhora a experiência",
+          "peso": {
+            "ux": 3,
+            "agilidade": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "pergunta": "Qual dessas rotinas parece mais interessante para você?",
+      "opcoes": [
+        {
+          "texto": "Criar, testar, corrigir e evoluir soluções digitais",
+          "peso": {
+            "desenvolvimento": 3,
+            "cloud": 1
+          }
+        },
+        {
+          "texto": "Investigar dados, montar análises e gerar insights",
+          "peso": {
+            "dados": 3,
+            "ia": 1
+          }
+        },
+        {
+          "texto": "Acompanhar processos, organizar entregas e alinhar times",
+          "peso": {
+            "agilidade": 3,
+            "governanca": 2
+          }
+        },
+        {
+          "texto": "Pesquisar necessidades, desenhar soluções e melhorar interfaces",
+          "peso": {
+            "ux": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "pergunta": "O que mais combina com seu jeito de pensar?",
+      "opcoes": [
+        {
+          "texto": "Gosto de decompor problemas e buscar solução lógica",
+          "peso": {
+            "desenvolvimento": 3,
+            "ciberseguranca": 1
+          }
+        },
+        {
+          "texto": "Gosto de observar padrões, tendências e relações entre informações",
+          "peso": {
+            "dados": 3,
+            "ia": 2
+          }
+        },
+        {
+          "texto": "Gosto de estruturar, organizar e tornar as coisas mais claras",
+          "peso": {
+            "governanca": 3,
+            "agilidade": 2
+          }
+        },
+        {
+          "texto": "Gosto de entender pessoas, necessidades e experiências",
+          "peso": {
+            "ux": 3,
+            "agilidade": 1
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "pergunta": "Qual dessas situações parece mais interessante para você resolver?",
+      "opcoes": [
+        {
+          "texto": "Um sistema precisa funcionar melhor e com menos falhas",
+          "peso": {
+            "desenvolvimento": 2,
+            "cloud": 2,
+            "ciberseguranca": 1
+          }
+        },
+        {
+          "texto": "Uma empresa precisa entender melhor seus dados para decidir",
+          "peso": {
+            "dados": 3,
+            "ia": 2
+          }
+        },
+        {
+          "texto": "Um time está desorganizado e precisa trabalhar melhor junto",
+          "peso": {
+            "agilidade": 3,
+            "governanca": 2
+          }
+        },
+        {
+          "texto": "Uma solução existe, mas a experiência está ruim para quem usa",
+          "peso": {
+            "ux": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "pergunta": "Qual dessas áreas desperta mais curiosidade em você hoje?",
+      "opcoes": [
+        {
+          "texto": "Programação, aplicações, APIs e construção de sistemas",
+          "peso": {
+            "desenvolvimento": 3,
+            "cloud": 1
+          }
+        },
+        {
+          "texto": "Dashboards, análises, inteligência de dados e modelos",
+          "peso": {
+            "dados": 3,
+            "ia": 2
+          }
+        },
+        {
+          "texto": "Processos, gestão, métodos, estrutura e organização",
+          "peso": {
+            "agilidade": 2,
+            "governanca": 3
+          }
+        },
+        {
+          "texto": "Experiência do usuário, interface, pesquisa e usabilidade",
+          "peso": {
+            "ux": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "pergunta": "Como você prefere contribuir em um contexto de trabalho?",
+      "opcoes": [
+        {
+          "texto": "Construindo soluções técnicas e resolvendo problemas concretos",
+          "peso": {
+            "desenvolvimento": 3,
+            "cloud": 2
+          }
+        },
+        {
+          "texto": "Ajudando a interpretar informações e apoiar decisões",
+          "peso": {
+            "dados": 3,
+            "ia": 1,
+            "governanca": 1
+          }
+        },
+        {
+          "texto": "Organizando fluxos, alinhando pessoas e melhorando a execução",
+          "peso": {
+            "agilidade": 3,
+            "governanca": 2
+          }
+        },
+        {
+          "texto": "Tornando a experiência mais clara, útil e intuitiva",
+          "peso": {
+            "ux": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "pergunta": "Qual desses tipos de desafio mais te atrai?",
+      "opcoes": [
+        {
+          "texto": "Fazer algo funcionar melhor do ponto de vista técnico",
+          "peso": {
+            "desenvolvimento": 3,
+            "cloud": 2,
+            "ciberseguranca": 1
+          }
+        },
+        {
+          "texto": "Transformar informação em análise e inteligência",
+          "peso": {
+            "dados": 3,
+            "ia": 2
+          }
+        },
+        {
+          "texto": "Estruturar melhor processos e governança do trabalho",
+          "peso": {
+            "governanca": 3,
+            "agilidade": 2
+          }
+        },
+        {
+          "texto": "Melhorar a interação entre pessoas e soluções digitais",
+          "peso": {
+            "ux": 3
+          }
+        }
+      ]
+    }
+  ]
+}

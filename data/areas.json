@@ -1,0 +1,274 @@
+[
+  {
+    "id": "desenvolvimento",
+    "nome": "Desenvolvimento de Software",
+    "descricao": "Criação de sistemas, aplicações e soluções digitais que são utilizadas por pessoas e empresas no dia a dia.",
+    "perfil": [
+      "Gosta de lógica",
+      "Gosta de resolver problemas",
+      "Tem paciência para testar e ajustar",
+      "Se interessa por como sistemas funcionam"
+    ],
+    "primeiros_passos": [
+      "Entender lógica de programação",
+      "Aprender HTML, CSS e JavaScript",
+      "Criar pequenos projetos",
+      "Versionar código com Git"
+    ],
+    "ferramentas": [
+      "VS Code",
+      "Git",
+      "GitHub",
+      "Postman"
+    ],
+    "estudos_recomendados": [
+      "Cursos de lógica de programação",
+      "Formações em desenvolvimento web",
+      "Projetos práticos",
+      "Documentação oficial"
+    ],
+    "cargos_iniciais": [
+      "Desenvolvedor Júnior",
+      "Estagiário de Desenvolvimento",
+      "Front-end Júnior",
+      "Back-end Júnior"
+    ]
+  },
+  {
+    "id": "dados",
+    "nome": "Dados e Analytics",
+    "descricao": "Transformação de dados em informação para apoiar decisões de negócio e gerar valor para empresas.",
+    "perfil": [
+      "Gosta de analisar informações",
+      "Curte números e padrões",
+      "Tem olhar crítico",
+      "Gosta de entender comportamento"
+    ],
+    "primeiros_passos": [
+      "Aprender Excel",
+      "Entender SQL",
+      "Criar dashboards simples",
+      "Estudar conceitos de análise de dados"
+    ],
+    "ferramentas": [
+      "Excel",
+      "Power BI",
+      "SQL",
+      "Python"
+    ],
+    "estudos_recomendados": [
+      "Cursos de análise de dados",
+      "Formação em BI",
+      "Projetos com datasets reais",
+      "Introdução a estatística"
+    ],
+    "cargos_iniciais": [
+      "Analista de Dados Júnior",
+      "BI Júnior",
+      "Assistente de Dados"
+    ]
+  },
+  {
+    "id": "ia",
+    "nome": "Inteligência Artificial",
+    "descricao": "Construção de soluções que utilizam modelos para automatizar decisões, gerar conteúdo ou aprender com dados.",
+    "perfil": [
+      "Interesse em tecnologia avançada",
+      "Gosta de estudar conceitos complexos",
+      "Curiosidade por inovação",
+      "Interesse em dados e modelos"
+    ],
+    "primeiros_passos": [
+      "Entender fundamentos de IA",
+      "Aprender Python",
+      "Estudar Machine Learning básico",
+      "Explorar IA generativa"
+    ],
+    "ferramentas": [
+      "Python",
+      "Jupyter Notebook",
+      "APIs de IA",
+      "Frameworks de ML"
+    ],
+    "estudos_recomendados": [
+      "Cursos de IA e Machine Learning",
+      "Matemática básica aplicada",
+      "Projetos práticos com modelos",
+      "Estudo de LLMs"
+    ],
+    "cargos_iniciais": [
+      "Analista de IA",
+      "Engenheiro de Machine Learning Júnior",
+      "Analista de Dados com foco em IA"
+    ]
+  },
+  {
+    "id": "ciberseguranca",
+    "nome": "Cibersegurança",
+    "descricao": "Proteção de sistemas, dados e ambientes digitais contra ataques, falhas e riscos.",
+    "perfil": [
+      "Gosta de investigar",
+      "Curte segurança e proteção",
+      "Atenção a detalhes",
+      "Pensamento crítico"
+    ],
+    "primeiros_passos": [
+      "Entender redes de computadores",
+      "Estudar segurança básica",
+      "Conhecer tipos de ataques",
+      "Praticar com labs"
+    ],
+    "ferramentas": [
+      "Wireshark",
+      "Kali Linux",
+      "Burp Suite",
+      "SIEM"
+    ],
+    "estudos_recomendados": [
+      "Cursos de segurança da informação",
+      "Certificações iniciais",
+      "Laboratórios práticos",
+      "Estudo de redes"
+    ],
+    "cargos_iniciais": [
+      "Analista de Segurança Júnior",
+      "SOC Analyst",
+      "Analista de Riscos"
+    ]
+  },
+  {
+    "id": "cloud",
+    "nome": "Cloud e Infraestrutura",
+    "descricao": "Gestão de servidores, ambientes e infraestrutura tecnológica que suportam sistemas e aplicações.",
+    "perfil": [
+      "Gosta de estrutura e organização",
+      "Interesse em funcionamento de sistemas",
+      "Curte ambientes técnicos",
+      "Gosta de resolver problemas operacionais"
+    ],
+    "primeiros_passos": [
+      "Entender redes",
+      "Aprender conceitos de cloud",
+      "Criar ambientes simples",
+      "Estudar AWS, Azure ou GCP"
+    ],
+    "ferramentas": [
+      "AWS",
+      "Azure",
+      "Docker",
+      "Linux"
+    ],
+    "estudos_recomendados": [
+      "Cursos de cloud computing",
+      "Certificações iniciais",
+      "Laboratórios práticos",
+      "Estudo de infraestrutura"
+    ],
+    "cargos_iniciais": [
+      "Analista de Infraestrutura",
+      "Cloud Júnior",
+      "Administrador de Sistemas"
+    ]
+  },
+  {
+    "id": "ux",
+    "nome": "UX e Design",
+    "descricao": "Criação de experiências digitais focadas no usuário, garantindo usabilidade, clareza e eficiência.",
+    "perfil": [
+      "Gosta de design",
+      "Interesse em comportamento humano",
+      "Criatividade",
+      "Empatia"
+    ],
+    "primeiros_passos": [
+      "Entender UX básico",
+      "Aprender Figma",
+      "Criar protótipos",
+      "Estudar experiência do usuário"
+    ],
+    "ferramentas": [
+      "Figma",
+      "Miro",
+      "FigJam",
+      "Adobe XD"
+    ],
+    "estudos_recomendados": [
+      "Cursos de UX/UI",
+      "Portfólio prático",
+      "Estudo de usabilidade",
+      "Projetos reais"
+    ],
+    "cargos_iniciais": [
+      "UX Designer Júnior",
+      "UI Designer",
+      "Product Designer Júnior"
+    ]
+  },
+  {
+    "id": "agilidade",
+    "nome": "Agilidade e Projetos",
+    "descricao": "Organização do trabalho, gestão de projetos e melhoria contínua de processos dentro de times.",
+    "perfil": [
+      "Gosta de organização",
+      "Boa comunicação",
+      "Interesse em processos",
+      "Facilidade em trabalhar com pessoas"
+    ],
+    "primeiros_passos": [
+      "Entender Scrum e Kanban",
+      "Estudar gestão de projetos",
+      "Participar de times ágeis",
+      "Conhecer ferramentas de gestão"
+    ],
+    "ferramentas": [
+      "Jira",
+      "Trello",
+      "Azure DevOps",
+      "Miro"
+    ],
+    "estudos_recomendados": [
+      "Cursos de Scrum",
+      "Certificações ágeis",
+      "Estudo de gestão",
+      "Prática em projetos"
+    ],
+    "cargos_iniciais": [
+      "Scrum Master Júnior",
+      "Analista de Projetos",
+      "Agile Coach Júnior"
+    ]
+  },
+  {
+    "id": "governanca",
+    "nome": "Governança de TI",
+    "descricao": "Estruturação de processos, controles e práticas que garantem eficiência, segurança e alinhamento estratégico.",
+    "perfil": [
+      "Gosta de organização",
+      "Visão estratégica",
+      "Interesse em processos",
+      "Atenção a padrões"
+    ],
+    "primeiros_passos": [
+      "Entender ITIL e COBIT",
+      "Estudar processos de TI",
+      "Conhecer gestão de serviços",
+      "Aprender governança básica"
+    ],
+    "ferramentas": [
+      "ServiceNow",
+      "Excel",
+      "Ferramentas de ITSM"
+    ],
+    "estudos_recomendados": [
+      "Cursos de governança",
+      "Certificações ITIL",
+      "COBIT",
+      "Gestão de serviços"
+    ],
+    "cargos_iniciais": [
+      "Analista de Governança",
+      "Analista de Processos",
+      "Analista de Serviços"
+    ]
+  }
+]

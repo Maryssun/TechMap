@@ -1,0 +1,203 @@
+/* =====================================================
+   TechMap - Responsive
+   Mobile-first + ajustes progressivos
+   ===================================================== */
+
+/* =============================
+   TABLET (até 1024px)
+   ============================= */
+
+@media (max-width: 1024px) {
+
+  /* HERO */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    min-height: auto;
+  }
+
+  .hero-panel {
+    justify-self: start;
+    max-width: 100%;
+  }
+
+  /* INTRO */
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ENTRY */
+  .entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-box {
+    justify-self: start;
+    max-width: 100%;
+  }
+
+  /* ABOUT */
+  .about-preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-placeholder {
+    margin: 0 auto;
+  }
+
+  /* CTA */
+  .cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* GRIDS */
+  .feature-grid,
+  .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =============================
+   MOBILE (até 768px)
+   ============================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .primary-nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-border-soft);
+    display: none;
+  }
+
+  .primary-nav.is-open {
+    display: block;
+  }
+
+  .primary-nav ul {
+    flex-direction: column;
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+
+  /* HERO */
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-highlights {
+    font-size: var(--font-size-xs);
+  }
+
+  /* CARDS */
+  .feature-grid,
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ENTRY */
+  .mini-code-card pre {
+    font-size: 0.7rem;
+  }
+
+  /* CTA */
+  .cta-box {
+    padding: var(--space-lg);
+  }
+
+  /* FOOTER */
+  .footer-content {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  /* TIPOGRAFIA */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* =============================
+   MOBILE PEQUENO (até 480px)
+   ============================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 16px;
+  }
+
+  /* HERO */
+  .hero-section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .hero-text {
+    font-size: var(--font-size-sm);
+  }
+
+  /* BOTÕES */
+  .btn {
+    padding: 10px 14px;
+    font-size: var(--font-size-xs);
+  }
+
+  /* CARDS */
+  .feature-card,
+  .overview-card {
+    padding: var(--space-md);
+  }
+
+  /* CTA */
+  .cta-box {
+    padding: var(--space-md);
+  }
+}
+
+
+/* =============================
+   TELAS GRANDES (acima de 1280px)
+   ============================= */
+
+@media (min-width: 1280px) {
+
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .container {
+    max-width: 1280px;
+  }
+}
+
+
+/* =============================
+   TELAS MUITO GRANDES (1440+)
+   ============================= */
+
+@media (min-width: 1440px) {
+
+  .container {
+    max-width: 1360px;
+  }
+}

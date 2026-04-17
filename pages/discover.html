@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Descubra caminhos na tecnologia com base no seu perfil, interesses e forma de pensar. Comece com mais clareza usando o TechMap."
+  />
+  <meta name="theme-color" content="#0f172a" />
+  <title>TechMap | Descobrir Caminho</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../assets/css/variables.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/pages.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="../index.html" class="brand" aria-label="Página inicial do TechMap">
+        <span class="brand-mark">TechMap</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="./discover.html" class="active">Descobrir caminho</a></li>
+          <li><a href="./career-areas.html">Áreas</a></li>
+          <li><a href="./study-guide.html">Estudos</a></li>
+          <li><a href="./communities.html">Comunidades</a></li>
+          <li><a href="./about.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Ponto de partida</span>
+          <h1>Descubra um caminho na tecnologia que faça sentido para você.</h1>
+
+          <p class="hero-text">
+            Você não precisa começar sabendo exatamente o que quer fazer.
+            O primeiro passo é entender melhor seu perfil, seus interesses
+            e o tipo de rotina com que você mais combina.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#questionario">Começar agora</a>
+            <a class="btn btn-secondary" href="./career-areas.html">Explorar áreas</a>
+          </div>
+
+          <ul class="hero-highlights" aria-label="Destaques da página">
+            <li>Entenda seu perfil com perguntas simples</li>
+            <li>Receba sugestões de áreas mais alinhadas</li>
+            <li>Transforme dúvida em direção prática</li>
+          </ul>
+        </div>
+
+        <div class="hero-panel" aria-hidden="true">
+          <div class="hero-card hero-card-main">
+            <span class="hero-card-label">Importante</span>
+            <strong>Você não precisa decidir toda a sua carreira agora.</strong>
+            <p>
+              O objetivo aqui é reduzir a confusão e ajudar você a identificar
+              caminhos mais coerentes com seu perfil.
+            </p>
+          </div>
+
+          <div class="hero-card-stack">
+            <div class="hero-card">
+              <span class="hero-card-label">Reflexão</span>
+              <strong>Entenda seu jeito</strong>
+              <p>Perceba como você gosta de aprender, trabalhar e resolver problemas.</p>
+            </div>
+            <div class="hero-card">
+              <span class="hero-card-label">Direção</span>
+              <strong>Veja possibilidades</strong>
+              <p>Receba recomendações de áreas que podem combinar mais com você.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <div class="container intro-grid">
+        <div>
+          <span class="section-kicker">Antes de escolher</span>
+          <h2>Escolher melhor começa entendendo como você funciona.</h2>
+        </div>
+
+        <div class="intro-text-group">
+          <p>
+            Muitas pessoas tentam escolher uma área na tecnologia olhando apenas salários,
+            tendências ou nomes de cargos. Isso costuma gerar mais ansiedade do que direção.
+          </p>
+          <p>
+            O TechMap propõe começar de outro jeito: primeiro entendendo seu perfil,
+            depois conectando isso a áreas reais, estudos e próximos passos possíveis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="questionario" class="discover-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Descoberta guiada</span>
+          <h2>Responda algumas perguntas rápidas</h2>
+          <p>
+            Este questionário ajuda a identificar áreas da tecnologia que podem fazer mais sentido
+            para você com base em interesses, preferências e estilo de trabalho.
+          </p>
+        </div>
+
+        <div id="progress" class="eyebrow"></div>
+        <div id="question-container" class="discover-card" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="discover-section">
+      <div class="container">
+        <div class="discover-card">
+          <h3>Como interpretar o resultado</h3>
+          <p>
+            O resultado não é uma sentença definitiva. Ele funciona como um ponto de partida
+            para ajudar você a explorar áreas com mais lógica e menos aleatoriedade.
+          </p>
+          <p>
+            Você pode se identificar com mais de uma área, e isso é totalmente normal.
+            O importante é usar esse resultado para aprofundar sua reflexão e testar possibilidades.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="discover-section">
+      <div class="container">
+        <div class="discover-card">
+          <h3>Depois do questionário</h3>
+          <p>
+            Depois de ver seu resultado, o melhor próximo passo é explorar as áreas sugeridas,
+            entender o que cada uma faz, como começar e o que estudar primeiro.
+          </p>
+          <a class="btn btn-secondary" href="./career-areas.html">Ver todas as áreas</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box">
+        <div>
+          <span class="section-kicker">Próximo passo</span>
+          <h2>Depois da descoberta, avance com mais clareza.</h2>
+          <p>
+            Entender seu perfil ajuda, mas construir caminho exige explorar áreas,
+            estudos e prática de forma conectada.
+          </p>
+        </div>
+
+        <a class="btn btn-primary" href="./career-areas.html">Explorar áreas</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <strong>TechMap</strong>
+        <p>Conectando você a caminhos reais na tecnologia.</p>
+      </div>
+
+      <nav aria-label="Links do rodapé">
+        <ul>
+          <li><a href="./about.html">Sobre</a></li>
+          <li><a href="./career-areas.html">Áreas</a></li>
+          <li><a href="./study-guide.html">Estudos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../assets/js/data-loader.js"></script>
+  <script src="../assets/js/discover.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

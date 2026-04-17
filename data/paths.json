@@ -1,0 +1,253 @@
+[
+  {
+    "id": "logica-e-construcao",
+    "nome": "Caminho para quem gosta de lógica e construção",
+    "area_relacionada": [
+      "Desenvolvimento de Software",
+      "Cloud e Infraestrutura",
+      "Inteligência Artificial"
+    ],
+    "perfil_indicado": "Pessoas que gostam de entender como as coisas funcionam, decompor problemas e construir soluções passo a passo.",
+    "resumo": "Esse caminho costuma fazer sentido para quem se sente confortável com lógica, estrutura, testes e evolução contínua de soluções técnicas.",
+    "passos": [
+      "Começar por lógica de programação e resolução de problemas",
+      "Aprender HTML, CSS e JavaScript ou Python, conforme o foco inicial",
+      "Criar pequenos projetos para consolidar o aprendizado",
+      "Aprender Git e GitHub para versionamento",
+      "Explorar APIs, aplicações e estruturas mais completas"
+    ],
+    "estudos": [
+      "Lógica de programação",
+      "Fundamentos de desenvolvimento web ou Python",
+      "Versionamento com Git",
+      "Projetos práticos",
+      "Documentação oficial"
+    ],
+    "ferramentas": [
+      "VS Code",
+      "Git",
+      "GitHub",
+      "Postman",
+      "Python"
+    ]
+  },
+  {
+    "id": "analise-e-padroes",
+    "nome": "Caminho para quem gosta de análise, padrões e interpretação",
+    "area_relacionada": [
+      "Dados e Analytics",
+      "Inteligência Artificial",
+      "Governança de TI"
+    ],
+    "perfil_indicado": "Pessoas que gostam de observar informações, encontrar relações, analisar cenários e gerar entendimento a partir de dados.",
+    "resumo": "Esse caminho combina com quem sente interesse por interpretação, análise, decisão e transformação de informação em inteligência.",
+    "passos": [
+      "Aprender Excel e conceitos básicos de análise",
+      "Estudar SQL para leitura e manipulação de dados",
+      "Criar dashboards e análises simples",
+      "Entender noções de estatística aplicada",
+      "Explorar Python e modelos mais avançados conforme a evolução"
+    ],
+    "estudos": [
+      "Excel",
+      "SQL",
+      "Power BI",
+      "Estatística básica",
+      "Introdução à análise de dados"
+    ],
+    "ferramentas": [
+      "Excel",
+      "SQL",
+      "Power BI",
+      "Python",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    "id": "organizacao-e-processos",
+    "nome": "Caminho para quem gosta de organização, estrutura e processos",
+    "area_relacionada": [
+      "Agilidade e Projetos",
+      "Governança de TI"
+    ],
+    "perfil_indicado": "Pessoas que gostam de estruturar trabalho, organizar fluxos, melhorar processos e dar clareza para execução.",
+    "resumo": "Esse caminho costuma fazer sentido para quem tem facilidade com coordenação, alinhamento, acompanhamento e melhoria contínua.",
+    "passos": [
+      "Entender fundamentos de Scrum, Kanban e gestão de trabalho",
+      "Estudar noções de gestão de projetos e governança",
+      "Conhecer ferramentas de acompanhamento de fluxo",
+      "Observar como times se organizam na prática",
+      "Desenvolver visão sobre priorização, entrega e melhoria"
+    ],
+    "estudos": [
+      "Scrum",
+      "Kanban",
+      "Gestão de projetos",
+      "ITIL ou COBIT em nível introdutório",
+      "Práticas de acompanhamento e organização"
+    ],
+    "ferramentas": [
+      "Jira",
+      "Trello",
+      "Azure DevOps",
+      "Miro",
+      "ServiceNow"
+    ]
+  },
+  {
+    "id": "pessoas-e-experiencia",
+    "nome": "Caminho para quem gosta de pessoas, experiência e clareza",
+    "area_relacionada": [
+      "UX e Design",
+      "Agilidade e Projetos"
+    ],
+    "perfil_indicado": "Pessoas que gostam de entender comportamento, melhorar interação, desenhar experiências e tornar soluções mais intuitivas.",
+    "resumo": "Esse caminho combina com quem tem olhar para usabilidade, empatia, comunicação e construção de soluções centradas no usuário.",
+    "passos": [
+      "Estudar fundamentos de UX e experiência do usuário",
+      "Aprender Figma e prototipação básica",
+      "Observar problemas de navegação e clareza em produtos digitais",
+      "Criar pequenos fluxos e telas para prática",
+      "Entender pesquisa, usabilidade e jornada do usuário"
+    ],
+    "estudos": [
+      "UX básico",
+      "UI introdutório",
+      "Pesquisa com usuário",
+      "Usabilidade",
+      "Prototipação"
+    ],
+    "ferramentas": [
+      "Figma",
+      "FigJam",
+      "Miro",
+      "Notion"
+    ]
+  },
+  {
+    "id": "seguranca-e-investigacao",
+    "nome": "Caminho para quem gosta de investigação, risco e proteção",
+    "area_relacionada": [
+      "Cibersegurança",
+      "Cloud e Infraestrutura"
+    ],
+    "perfil_indicado": "Pessoas com atenção a detalhes, interesse em risco, curiosidade investigativa e gosto por entender vulnerabilidades e proteção.",
+    "resumo": "Esse caminho costuma fazer sentido para quem gosta de investigar, monitorar, proteger ambientes e pensar preventivamente.",
+    "passos": [
+      "Entender fundamentos de redes e sistemas",
+      "Aprender conceitos básicos de segurança da informação",
+      "Estudar tipos de ameaças, vulnerabilidades e controles",
+      "Explorar laboratórios práticos de segurança",
+      "Aprofundar em monitoramento, defesa ou análise conforme o interesse"
+    ],
+    "estudos": [
+      "Redes de computadores",
+      "Segurança da informação",
+      "Fundamentos de sistemas",
+      "Prática em labs",
+      "Conceitos de risco e proteção"
+    ],
+    "ferramentas": [
+      "Wireshark",
+      "Kali Linux",
+      "Burp Suite",
+      "SIEM"
+    ]
+  },
+  {
+    "id": "infraestrutura-e-operacao",
+    "nome": "Caminho para quem gosta de estrutura, ambiente e operação técnica",
+    "area_relacionada": [
+      "Cloud e Infraestrutura",
+      "Desenvolvimento de Software",
+      "Cibersegurança"
+    ],
+    "perfil_indicado": "Pessoas que gostam de entender o ambiente que sustenta sistemas, resolver problemas operacionais e estruturar funcionamento técnico.",
+    "resumo": "Esse caminho se conecta com quem se interessa por servidores, redes, cloud, disponibilidade, automação e sustentação de ambientes.",
+    "passos": [
+      "Estudar fundamentos de sistemas operacionais e redes",
+      "Entender conceitos de infraestrutura e cloud",
+      "Aprender Linux e comandos básicos",
+      "Explorar provedores como AWS, Azure ou GCP",
+      "Praticar configuração de ambientes simples"
+    ],
+    "estudos": [
+      "Linux",
+      "Redes",
+      "Cloud computing",
+      "Infraestrutura básica",
+      "Automação introdutória"
+    ],
+    "ferramentas": [
+      "Linux",
+      "AWS",
+      "Azure",
+      "Docker",
+      "Terminal"
+    ]
+  },
+  {
+    "id": "inovacao-e-modelos",
+    "nome": "Caminho para quem gosta de inovação, modelos e inteligência aplicada",
+    "area_relacionada": [
+      "Inteligência Artificial",
+      "Dados e Analytics",
+      "Desenvolvimento de Software"
+    ],
+    "perfil_indicado": "Pessoas curiosas sobre modelos, automação inteligente, IA generativa e novas formas de resolver problemas com tecnologia.",
+    "resumo": "Esse caminho costuma fazer sentido para quem quer entender como modelos funcionam, como aplicar IA e como conectar dados a soluções mais avançadas.",
+    "passos": [
+      "Entender fundamentos de IA, dados e Machine Learning",
+      "Aprender Python e ambiente de experimentação",
+      "Estudar modelos básicos e aplicações reais",
+      "Explorar IA generativa e uso de APIs",
+      "Testar pequenos projetos aplicados"
+    ],
+    "estudos": [
+      "Python",
+      "Fundamentos de IA",
+      "Machine Learning introdutório",
+      "IA generativa",
+      "Projetos práticos"
+    ],
+    "ferramentas": [
+      "Python",
+      "Jupyter Notebook",
+      "APIs de IA",
+      "Google Colab"
+    ]
+  },
+  {
+    "id": "ponte-entre-negocio-e-tecnologia",
+    "nome": "Caminho para quem gosta de fazer ponte entre negócio e tecnologia",
+    "area_relacionada": [
+      "Governança de TI",
+      "Agilidade e Projetos",
+      "Dados e Analytics",
+      "UX e Design"
+    ],
+    "perfil_indicado": "Pessoas com boa comunicação, visão estruturada, capacidade de traduzir necessidades e interesse em conectar estratégia, processo e execução.",
+    "resumo": "Esse caminho costuma aparecer para quem gosta de entender contexto, organizar demanda, alinhar pessoas e transformar necessidade em ação mais clara.",
+    "passos": [
+      "Entender fundamentos de processos, produtos e organização do trabalho",
+      "Aprender a traduzir necessidades em entregas ou melhorias",
+      "Estudar métricas, priorização e acompanhamento",
+      "Conhecer ferramentas de gestão e apoio à decisão",
+      "Desenvolver repertório sobre tecnologia e negócio ao mesmo tempo"
+    ],
+    "estudos": [
+      "Gestão de projetos",
+      "Processos",
+      "Métricas",
+      "Comunicação e alinhamento",
+      "Fundamentos de tecnologia e negócio"
+    ],
+    "ferramentas": [
+      "Jira",
+      "Miro",
+      "Power BI",
+      "Excel",
+      "Notion"
+    ]
+  }
+]

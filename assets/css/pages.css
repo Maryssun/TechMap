@@ -1,0 +1,255 @@
+/* =====================================================
+   TechMap - Pages
+   Ajustes específicos por página
+   ===================================================== */
+
+
+/* =============================
+   HERO VARIAÇÕES
+   ============================= */
+
+.hero-section {
+  background:
+    radial-gradient(circle at top, rgba(37, 99, 235, 0.08), transparent 40%),
+    var(--color-bg-primary);
+}
+
+
+/* =============================
+   DISCOVER PAGE (futuro)
+   ============================= */
+
+.discover-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.discover-card {
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-lg);
+  transition: var(--transition-normal);
+}
+
+.discover-card:hover {
+  border-color: var(--color-accent);
+}
+
+.discover-card h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.discover-card p {
+  margin-bottom: var(--space-md);
+}
+
+
+/* =============================
+   CAREER AREAS PAGE
+   ============================= */
+
+.area-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: var(--transition-normal);
+}
+
+.area-card:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+}
+
+.area-card h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.area-meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+
+/* =============================
+   CAREER PATHS
+   ============================= */
+
+.path-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent),
+    var(--color-bg-tertiary);
+  border: 1px solid var(--color-border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.path-card strong {
+  color: var(--color-text-primary);
+}
+
+.path-card ul {
+  margin-top: var(--space-sm);
+}
+
+.path-card li {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+
+/* =============================
+   STUDY GUIDE
+   ============================= */
+
+.study-block {
+  padding: var(--space-lg);
+  border-left: 3px solid var(--color-accent);
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+}
+
+.study-block h3 {
+  margin-bottom: var(--space-xs);
+}
+
+
+/* =============================
+   LEARNING OPTIONS
+   ============================= */
+
+.learning-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-bg-tertiary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.learning-card span {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent);
+}
+
+.learning-card:hover {
+  border-color: var(--color-accent);
+}
+
+
+/* =============================
+   TOOLS PAGE
+   ============================= */
+
+.tool-card {
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-bg-tertiary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.tool-card small {
+  color: var(--color-text-muted);
+}
+
+
+/* =============================
+   COMMUNITIES PAGE
+   ============================= */
+
+.community-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-bg-tertiary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.community-card a {
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+}
+
+
+/* =============================
+   RESOURCES PAGE
+   ============================= */
+
+.resource-card {
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-bg-tertiary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.resource-card strong {
+  color: var(--color-text-primary);
+}
+
+
+/* =============================
+   EMPTY STATES
+   ============================= */
+
+.empty-state {
+  text-align: center;
+  padding: var(--space-2xl);
+  border: 1px dashed var(--color-border-soft);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+}
+
+
+/* =============================
+   LOADING STATES
+   ============================= */
+
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: \"Carregando...\";
+  display: block;
+  margin-top: var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+
+/* =============================
+   MOBILE AJUSTES
+   ============================= */
+
+@media (max-width: 768px) {
+
+  .discover-card,
+  .learning-card,
+  .community-card,
+  .resource-card {
+    padding: var(--space-md);
+  }
+
+  .study-block {
+    padding: var(--space-md);
+  }
+
+}
