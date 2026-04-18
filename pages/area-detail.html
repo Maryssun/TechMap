@@ -3,39 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0f172a" />
-  <title>TechMap | Detalhe da Área</title>
+  <meta name="description" content="Detalhes de uma área da tecnologia no TechMap." />
+  <meta name="theme-color" content="#081224" />
+  <title>Detalhe da área | TechMap</title>
 
   <link rel="stylesheet" href="../assets/css/variables.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/pages.css" />
   <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
 </head>
-
 <body>
-  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
   <header class="site-header">
     <div class="container header-content">
       <a href="../index.html" class="brand">
+        <span class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 3l7 4v5c0 4.5-2.9 7.9-7 9-4.1-1.1-7-4.5-7-9V7l7-4z"></path>
+            <path d="M9.5 12.5l1.7 1.7 3.5-4"></path>
+          </svg>
+        </span>
         <span class="brand-mark">TechMap</span>
       </a>
 
-      <button class="menu-toggle" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" type="button">
+        <span></span><span></span><span></span>
       </button>
 
-      <nav class="primary-nav">
+      <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="../index.html">Início</a></li>
-          <li><a href="./discover.html">Descobrir</a></li>
-          <li><a href="./career-areas.html">Áreas</a></li>
+          <li><a href="./career-areas.html" class="active">Áreas</a></li>
+          <li><a href="./career-paths.html">Caminhos</a></li>
           <li><a href="./study-guide.html">Estudos</a></li>
-          <li><a href="./communities.html">Comunidades</a></li>
           <li><a href="./about.html">Sobre</a></li>
         </ul>
       </nav>
@@ -43,110 +47,113 @@
   </header>
 
   <main id="main-content">
-
-    <!-- HERO DINÂMICO -->
     <section class="hero-section">
       <div class="container">
-        <div id="area-header" class="content-medium"></div>
+        <div id="area-header" class="content-medium reveal"></div>
       </div>
     </section>
 
-    <!-- CONTEÚDO -->
-    <section>
+    <section class="home-section">
       <div class="container">
+        <div class="section-shell reveal">
+          <div class="grid-2">
+            <article class="card">
+              <h3 class="card-title">Perfil mais comum</h3>
+              <ul id="perfil"></ul>
+            </article>
 
-        <div class="grid-2">
+            <article class="card">
+              <h3 class="card-title">Primeiros passos</h3>
+              <ul id="passos"></ul>
+            </article>
 
-          <div>
-            <h3>Perfil mais comum</h3>
-            <ul id="perfil"></ul>
+            <article class="card">
+              <h3 class="card-title">Ferramentas</h3>
+              <div id="ferramentas" class="inline-actions"></div>
+            </article>
 
-            <h3 style="margin-top: 24px;">Primeiros passos</h3>
-            <ul id="passos"></ul>
+            <article class="card">
+              <h3 class="card-title">Possíveis cargos</h3>
+              <ul id="cargos"></ul>
+            </article>
           </div>
 
-          <div>
-            <h3>Ferramentas</h3>
-            <div id="ferramentas" class="inline-actions"></div>
-
-            <h3 style="margin-top: 24px;">Possíveis cargos</h3>
-            <ul id="cargos"></ul>
+          <div class="stack-lg" style="margin-top: 24px;">
+            <article class="card">
+              <h3 class="card-title">O que estudar</h3>
+              <ul id="estudos"></ul>
+            </article>
           </div>
-
         </div>
-
-        <div style="margin-top: 40px;">
-          <h3>O que estudar</h3>
-          <ul id="estudos"></ul>
-        </div>
-
       </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta-section">
-      <div class="container cta-box">
-        <div>
-          <span class="section-kicker">Próximo passo</span>
-          <h2>Agora conecte essa área com estudo e prática.</h2>
-          <p>Veja como estruturar seu aprendizado de forma mais estratégica.</p>
+      <div class="container">
+        <div class="cta-box reveal-zoom">
+          <div>
+            <span class="section-kicker">Próximo passo</span>
+            <h2>Conecte esta área com caminhos, estudos e prática.</h2>
+            <p>
+              A área faz mais sentido quando você a relaciona com rotina, aprendizado e movimento real.
+            </p>
+          </div>
+
+          <div class="inline-actions">
+            <a class="btn btn-primary" href="./study-guide.html">Ver estudos</a>
+            <a class="btn btn-secondary" href="./career-paths.html">Ver caminhos</a>
+          </div>
         </div>
-        <a class="btn btn-primary" href="./study-guide.html">Ver estudos</a>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container footer-content">
       <div>
         <strong>TechMap</strong>
-        <p>Conectando você a caminhos reais na tecnologia.</p>
+        <p>Conectando você a caminhos reais na tecnologia com mais clareza, contexto e direção.</p>
       </div>
     </div>
   </footer>
 
   <script src="../assets/js/data-loader.js"></script>
-  <script src="../assets/js/app.js"></script>
-
-  <!-- SCRIPT DINÂMICO -->
   <script>
-    document.addEventListener("DOMContentLoaded", initDetailPage);
+    document.addEventListener("DOMContentLoaded", initAreaDetailPage);
 
-    async function initDetailPage() {
+    async function initAreaDetailPage() {
       const params = new URLSearchParams(window.location.search);
       const id = params.get("id");
 
       if (!id) {
-        renderError("Área não encontrada.");
+        renderAreaError("Área não encontrada.");
         return;
       }
 
       const areas = await DataLoader.loadAreas();
 
-      if (!areas) {
-        renderError("Erro ao carregar dados.");
+      if (!areas || !Array.isArray(areas)) {
+        renderAreaError("Não foi possível carregar os dados da área.");
         return;
       }
 
-      const area = areas.find(a => a.id === id);
+      const area = areas.find((item) => item.id === id);
 
       if (!area) {
-        renderError("Área não encontrada.");
+        renderAreaError("Área não encontrada.");
         return;
       }
 
-      renderArea(area);
+      renderAreaDetail(area);
     }
 
-    function renderArea(area) {
-      // HEADER
+    function renderAreaDetail(area) {
       const header = document.getElementById("area-header");
 
       header.innerHTML = `
-        <span class="section-kicker">Área da tecnologia</span>
-        <h1>${safe(area.nome)}</h1>
-        <p>${safe(area.descricao)}</p>
+        <span class="eyebrow">Detalhe da área</span>
+        <h1>${escapeHtml(area.nome)}</h1>
+        <p class="hero-text">${escapeHtml(area.descricao)}</p>
       `;
 
       renderList("perfil", area.perfil);
@@ -158,44 +165,54 @@
 
     function renderList(id, items) {
       const container = document.getElementById(id);
+      if (!container) return;
+
       container.innerHTML = "";
 
-      if (!items || items.length === 0) return;
-
-      items.forEach(item => {
+      (items || []).forEach((item) => {
         const li = document.createElement("li");
-        li.textContent = safe(item);
+        li.textContent = item;
         container.appendChild(li);
       });
     }
 
     function renderTags(id, items) {
       const container = document.getElementById(id);
+      if (!container) return;
+
       container.innerHTML = "";
 
-      if (!items) return;
-
-      items.forEach(item => {
+      (items || []).forEach((item) => {
         const span = document.createElement("span");
         span.className = "pill";
-        span.textContent = safe(item);
+        span.textContent = item;
         container.appendChild(span);
       });
     }
 
-    function renderError(message) {
+    function renderAreaError(message) {
       const main = document.getElementById("main-content");
       main.innerHTML = `
-        <section class="container">
-          <div class="empty-state">${message}</div>
+        <section class="home-section">
+          <div class="container">
+            <div class="empty-state">
+              <strong>Erro</strong>
+              <p>${escapeHtml(message)}</p>
+            </div>
+          </div>
         </section>
       `;
     }
 
-    function safe(value) {
-      return value ? String(value) : "";
+    function escapeHtml(value) {
+      return String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
     }
   </script>
-
+  <script src="../assets/js/app.js"></script>
 </body>
 </html>

@@ -1,83 +1,82 @@
 /* =====================================================
    TechMap - Responsive
-   Mobile-first + ajustes progressivos
+   Ajustes responsivos centralizados
    ===================================================== */
 
-/* =============================
-   TABLET (até 1024px)
-   ============================= */
-
-@media (max-width: 1024px) {
-
-  /* HERO */
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-    min-height: auto;
+@media (max-width: 1180px) {
+  .stats-grid,
+  .path-grid,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .hero-panel {
-    justify-self: start;
-    max-width: 100%;
+  .explore-grid,
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  /* INTRO */
-  .intro-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* ENTRY */
-  .entry-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .entry-box {
-    justify-self: start;
-    max-width: 100%;
-  }
-
-  /* ABOUT */
-  .about-preview-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-photo-placeholder {
-    margin: 0 auto;
-  }
-
-  /* CTA */
-  .cta-box {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* GRIDS */
   .feature-grid,
   .overview-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+@media (max-width: 920px) {
+  .hero-grid,
+  .intro-grid,
+  .entry-grid,
+  .about-preview-grid,
+  .info-grid,
+  .hero-mini-grid,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
 
-/* =============================
-   MOBILE (até 768px)
-   ============================= */
+  .section-top {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .hero-copy h1,
+  .section-heading h2,
+  .cta-box h2,
+  .section-title-premium {
+    max-width: 100%;
+  }
+
+  .about-photo-placeholder {
+    margin: 0 auto;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
 
 @media (max-width: 768px) {
+  .container {
+    width: min(100% - 32px, var(--container-max-width));
+  }
 
-  /* HEADER */
   .menu-toggle {
     display: flex;
   }
 
   .primary-nav {
     position: absolute;
-    top: 72px;
+    top: 78px;
     left: 0;
-    width: 100%;
-    background-color: var(--color-bg-secondary);
-    border-bottom: 1px solid var(--color-border-soft);
+    right: 0;
     display: none;
+    background: rgba(8, 18, 36, 0.96);
+    border-bottom: 1px solid var(--color-border-soft);
+    padding: 14px 16px 18px;
+    z-index: var(--z-overlay);
   }
 
   .primary-nav.is-open {
@@ -86,118 +85,107 @@
 
   .primary-nav ul {
     flex-direction: column;
-    padding: var(--space-md);
-    gap: var(--space-md);
+    align-items: stretch;
   }
 
-  /* HERO */
-  .hero-actions {
+  .primary-nav a {
+    justify-content: center;
+  }
+
+  .feature-grid,
+  .overview-grid,
+  .grid-3,
+  .grid-4,
+  .stats-grid,
+  .path-grid,
+  .explore-grid,
+  .footer-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions,
+  .inline-actions {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .hero-actions .btn {
+  .hero-actions .btn,
+  .inline-actions .btn {
     width: 100%;
   }
 
-  .hero-highlights {
-    font-size: var(--font-size-xs);
-  }
-
-  /* CARDS */
-  .feature-grid,
-  .overview-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* ENTRY */
-  .mini-code-card pre {
-    font-size: 0.7rem;
-  }
-
-  /* CTA */
+  .section-shell,
   .cta-box {
-    padding: var(--space-lg);
+    padding: 22px;
   }
 
-  /* FOOTER */
-  .footer-content {
+  .hero-section {
+    padding-top: 44px;
+  }
+
+  section {
+    padding: 24px 0;
+  }
+
+  .header-content {
+    min-height: 74px;
+  }
+
+  .hero-main-top {
     flex-direction: column;
-    gap: var(--space-md);
-  }
-
-  /* TIPOGRAFIA */
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
+    align-items: start;
   }
 }
-
-
-/* =============================
-   MOBILE PEQUENO (até 480px)
-   ============================= */
 
 @media (max-width: 480px) {
-
   .container {
-    padding: 0 16px;
+    width: min(100% - 24px, var(--container-max-width));
   }
 
-  /* HERO */
-  .hero-section {
-    padding: var(--space-2xl) 0;
-  }
-
-  .hero-text {
-    font-size: var(--font-size-sm);
-  }
-
-  /* BOTÕES */
   .btn {
-    padding: 10px 14px;
-    font-size: var(--font-size-xs);
+    min-height: 48px;
+    padding: 0 16px;
+    font-size: 0.9rem;
   }
 
-  /* CARDS */
+  .card,
   .feature-card,
-  .overview-card {
-    padding: var(--space-md);
+  .overview-card,
+  .area-card,
+  .path-card,
+  .community-card,
+  .resource-card,
+  .tool-card,
+  .discover-card,
+  .learning-card,
+  .entry-box,
+  .mini-code-card,
+  .cta-box,
+  .section-shell,
+  .stat-card,
+  .explore-card,
+  .journey-card,
+  .home-info-card {
+    padding: 18px;
   }
 
-  /* CTA */
-  .cta-box {
-    padding: var(--space-md);
-  }
-}
-
-
-/* =============================
-   TELAS GRANDES (acima de 1280px)
-   ============================= */
-
-@media (min-width: 1280px) {
-
-  .hero-grid {
-    grid-template-columns: 1.1fr 0.9fr;
+  h1 {
+    font-size: 2.3rem;
   }
 
-  .container {
-    max-width: 1280px;
+  .hero-text,
+  p {
+    font-size: 0.96rem;
   }
-}
 
+  .hero-pill-row {
+    gap: 8px;
+  }
 
-/* =============================
-   TELAS MUITO GRANDES (1440+)
-   ============================= */
-
-@media (min-width: 1440px) {
-
-  .container {
-    max-width: 1360px;
+  .section-kicker,
+  .eyebrow {
+    min-height: 32px;
+    padding: 0 10px;
+    font-size: 0.75rem;
   }
 }

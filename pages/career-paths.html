@@ -5,53 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Explore caminhos de carreira na tecnologia com base em perfil, interesse, rotina e tipo de problema que você gosta de resolver."
+    content="Explore caminhos de carreira na tecnologia com base em perfil, forma de pensar e tipo de problema que mais combina com você."
   />
-  <meta name="theme-color" content="#0f172a" />
-  <title>TechMap | Caminhos de Carreira</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <meta name="theme-color" content="#081224" />
+  <title>Caminhos na tecnologia | TechMap</title>
 
   <link rel="stylesheet" href="../assets/css/variables.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/pages.css" />
   <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
   <header class="site-header">
     <div class="container header-content">
-      <a href="../index.html" class="brand" aria-label="Página inicial do TechMap">
+      <a href="../index.html" class="brand">
+        <span class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 3l7 4v5c0 4.5-2.9 7.9-7 9-4.1-1.1-7-4.5-7-9V7l7-4z"></path>
+            <path d="M9.5 12.5l1.7 1.7 3.5-4"></path>
+          </svg>
+        </span>
         <span class="brand-mark">TechMap</span>
       </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Abrir menu de navegação"
-        aria-expanded="false"
-        aria-controls="primary-navigation"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-navigation" type="button">
+        <span></span><span></span><span></span>
       </button>
 
       <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="../index.html">Início</a></li>
-          <li><a href="./discover.html">Descobrir caminho</a></li>
+          <li><a href="./discover.html">Descobrir</a></li>
           <li><a href="./career-areas.html">Áreas</a></li>
           <li><a href="./career-paths.html" class="active">Caminhos</a></li>
           <li><a href="./study-guide.html">Estudos</a></li>
+          <li><a href="./tools.html">Ferramentas</a></li>
+          <li><a href="./resources.html">Recursos</a></li>
           <li><a href="./communities.html">Comunidades</a></li>
           <li><a href="./about.html">Sobre</a></li>
         </ul>
@@ -62,175 +57,117 @@
   <main id="main-content">
     <section class="hero-section">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Perfis e direções</span>
-          <h1>Nem todo mundo entra na tecnologia pelo mesmo caminho.</h1>
-
+        <div class="hero-copy animate-rise-up">
+          <span class="eyebrow">Direção por perfil</span>
+          <h1>Nem todo caminho começa do mesmo jeito.</h1>
           <p class="hero-text">
-            Em vez de olhar apenas cargos isolados, esta página organiza caminhos por perfil,
-            tipo de interesse e estilo de trabalho. Isso ajuda você a enxergar possibilidades
-            mais coerentes com quem você é hoje.
+            Esta página organiza caminhos possíveis a partir de estilo de pensamento,
+            interesse e tipo de problema que mais chama sua atenção.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#paths-grid">Explorar caminhos</a>
-            <a class="btn btn-secondary" href="./discover.html">Fazer descoberta guiada</a>
+            <a href="#paths-grid-section" class="btn btn-primary">Explorar caminhos</a>
+            <a href="./career-areas.html" class="btn btn-secondary">Ver áreas</a>
           </div>
 
-          <ul class="hero-highlights" aria-label="Destaques da página">
-            <li>Caminhos organizados por perfil e interesse</li>
-            <li>Primeiros passos sugeridos para cada direção</li>
-            <li>Conexão entre áreas, estudos e rotina de trabalho</li>
+          <ul class="hero-highlights">
+            <li>Leia os caminhos como orientação, não como limitação</li>
+            <li>Conecte perfil, áreas relacionadas e primeiros passos</li>
+            <li>Use a plataforma para comparar antes de decidir</li>
           </ul>
         </div>
 
-        <div class="hero-panel" aria-hidden="true">
-          <div class="hero-card hero-card-main">
-            <span class="hero-card-label">Ideia central</span>
-            <strong>Carreira em tecnologia se constrói por aproximação.</strong>
-            <p>
-              Você não precisa começar com certeza absoluta. Pode começar entendendo
-              com que tipo de trabalho você se identifica mais.
-            </p>
-          </div>
-
-          <div class="hero-card-stack">
-            <div class="hero-card">
-              <span class="hero-card-label">Perfil</span>
-              <strong>Como você pensa</strong>
-              <p>Seu jeito de resolver problemas ajuda a indicar caminhos mais compatíveis.</p>
+        <div class="hero-panel reveal-right">
+          <article class="card card-glow">
+            <div class="card-header">
+              <span class="badge badge-primary">Direção</span>
+              <span class="badge badge-warning">não é caixa fechada</span>
             </div>
-            <div class="hero-card">
-              <span class="hero-card-label">Movimento</span>
-              <strong>Como começar</strong>
-              <p>Depois de escolher uma direção, você pode conectar estudo, prática e evolução.</p>
+            <div class="stack-md">
+              <h2 class="card-title">Caminho não é cargo.</h2>
+              <p class="card-description">
+                Caminho é uma direção inicial que ajuda você a saber onde concentrar energia primeiro.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Como usar</span>
+              <h2>Leia por afinidade, não por obrigação de decidir tudo agora.</h2>
+              <p>
+                Você pode se identificar com mais de um caminho. Isso é natural.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="intro-section">
-      <div class="container intro-grid">
-        <div>
-          <span class="section-kicker">Como usar esta página</span>
-          <h2>Use os caminhos como leitura de afinidade, não como caixa fechada.</h2>
-        </div>
+          <div class="feature-grid">
+            <article class="feature-card card hover-lift">
+              <span class="feature-step">01</span>
+              <h3 class="card-title">Observe o perfil</h3>
+              <p class="card-description">Veja o que mais combina com seu jeito de pensar.</p>
+            </article>
 
-        <div class="intro-text-group">
-          <p>
-            Uma mesma pessoa pode se identificar com mais de um caminho. Isso é normal.
-            O objetivo não é limitar, mas ajudar você a perceber quais direções fazem mais sentido explorar primeiro.
-          </p>
-          <p>
-            Cada caminho abaixo conecta perfil, áreas relacionadas, primeiros passos,
-            estudos e ferramentas que aparecem com frequência nessa trajetória.
-          </p>
-        </div>
-      </div>
-    </section>
+            <article class="feature-card card hover-lift">
+              <span class="feature-step">02</span>
+              <h3 class="card-title">Veja áreas relacionadas</h3>
+              <p class="card-description">Um caminho pode abrir mais de uma direção dentro da tecnologia.</p>
+            </article>
 
-    <section>
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Leitura orientadora</span>
-          <h2>Uma forma mais simples de comparar possibilidades dentro da tecnologia.</h2>
-          <p>
-            Você pode começar por aquilo que mais combina com sua forma de pensar,
-            seu ritmo e o tipo de desafio que mais desperta sua curiosidade.
-          </p>
-        </div>
+            <article class="feature-card card hover-lift">
+              <span class="feature-step">03</span>
+              <h3 class="card-title">Entenda os primeiros passos</h3>
+              <p class="card-description">Isso ajuda a sair da reflexão e entrar em ação.</p>
+            </article>
 
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-step">01</span>
-            <h3>Observe o perfil</h3>
-            <p>
-              Veja se o caminho conversa com seu jeito de trabalhar, aprender e resolver problemas.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-step">02</span>
-            <h3>Entenda as áreas relacionadas</h3>
-            <p>
-              Um caminho pode abrir portas para mais de uma área dentro da tecnologia.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-step">03</span>
-            <h3>Veja os primeiros passos</h3>
-            <p>
-              Isso ajuda a sair da reflexão e começar a se mover com mais clareza.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-step">04</span>
-            <h3>Conecte com estudo e prática</h3>
-            <p>
-              O caminho fica mais forte quando você relaciona interesse com ação concreta.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="paths-grid-section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Caminhos possíveis</span>
-          <h2>Explore direções de carreira a partir do seu perfil.</h2>
-          <p>
-            Os cards abaixo são carregados dinamicamente com base no arquivo
-            <strong>paths.json</strong>.
-          </p>
-        </div>
-
-        <div id="paths-grid" class="grid-3" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section class="entry-section">
-      <div class="container entry-grid">
-        <div class="entry-copy">
-          <span class="section-kicker">Se ainda estiver em dúvida</span>
-          <h2>Você pode começar por afinidade e ajustar com a prática.</h2>
-          <p>
-            Muitas vezes, a clareza real aparece quando você estuda um pouco, testa ferramentas,
-            conversa com pessoas da área e percebe como se sente naquele tipo de rotina.
-          </p>
-          <p>
-            Escolher um caminho inicial não significa ficar preso a ele. Significa apenas dar um primeiro passo com mais intenção.
-          </p>
-          <a class="btn btn-primary" href="./discover.html">Voltar para descoberta</a>
-        </div>
-
-        <aside class="entry-box" aria-label="Resumo da lógica da página">
-          <div class="mini-code-card">
-            <span class="mini-code-file">career-paths.html</span>
-            <pre><code>const perfil = "como eu gosto de pensar";
-const caminho = "direção inicial coerente";
-const ação = "explorar, estudar e praticar";
-
-console.log(ação);</code></pre>
+            <article class="feature-card card hover-lift">
+              <span class="feature-step">04</span>
+              <h3 class="card-title">Ajuste com a prática</h3>
+              <p class="card-description">O caminho inicial pode mudar conforme você aprende e experimenta.</p>
+            </article>
           </div>
-        </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="paths-grid-section" class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Caminhos possíveis</span>
+              <h2>Explore direções com base no seu perfil.</h2>
+              <p>Os caminhos abaixo são carregados a partir do arquivo <strong>paths.json</strong>.</p>
+            </div>
+          </div>
+
+          <div id="paths-grid" class="grid-3" aria-live="polite"></div>
+        </div>
       </div>
     </section>
 
     <section class="cta-section">
-      <div class="container cta-box">
-        <div>
-          <span class="section-kicker">Próximo passo</span>
-          <h2>Depois dos caminhos, aprofunde sua estrutura de estudos.</h2>
-          <p>
-            Agora que você já consegue enxergar possibilidades com mais clareza,
-            o próximo movimento é entender como transformar isso em estudo e evolução.
-          </p>
+      <div class="container">
+        <div class="cta-box reveal-zoom">
+          <div>
+            <span class="section-kicker">Próximo passo</span>
+            <h2>Depois dos caminhos, organize seu estudo.</h2>
+            <p>
+              Agora faz sentido transformar direção em base de aprendizagem.
+            </p>
+          </div>
+
+          <div class="inline-actions">
+            <a href="./study-guide.html" class="btn btn-primary">Ver estudos</a>
+            <a href="./tools.html" class="btn btn-secondary">Ver ferramentas</a>
+          </div>
         </div>
-        <a class="btn btn-primary" href="./study-guide.html">Ir para estudos</a>
       </div>
     </section>
   </main>
@@ -239,94 +176,13 @@ console.log(ação);</code></pre>
     <div class="container footer-content">
       <div>
         <strong>TechMap</strong>
-        <p>Conectando você a caminhos reais na tecnologia.</p>
+        <p>Conectando você a caminhos reais na tecnologia com mais clareza, contexto e direção.</p>
       </div>
-
-      <nav aria-label="Links do rodapé">
-        <ul>
-          <li><a href="./about.html">Sobre</a></li>
-          <li><a href="./discover.html">Descobrir caminho</a></li>
-          <li><a href="./career-areas.html">Áreas</a></li>
-          <li><a href="./study-guide.html">Estudos</a></li>
-        </ul>
-      </nav>
     </div>
   </footer>
 
   <script src="../assets/js/data-loader.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", initCareerPathsPage);
-
-    async function initCareerPathsPage() {
-      const container = document.getElementById("paths-grid");
-
-      if (!container) return;
-
-      container.innerHTML = '<div class="empty-state loading">Carregando caminhos...</div>';
-
-      const paths = await DataLoader.loadPaths();
-
-      if (!paths || !Array.isArray(paths) || paths.length === 0) {
-        container.innerHTML = '<div class="empty-state">Nenhum caminho foi encontrado no momento.</div>';
-        return;
-      }
-
-      container.innerHTML = "";
-
-      const fragment = document.createDocumentFragment();
-
-      paths.forEach((path) => {
-        const article = document.createElement("article");
-        article.className = "path-card";
-
-        const title = document.createElement("h3");
-        title.textContent = safe(path.nome);
-
-        const profile = document.createElement("p");
-        profile.innerHTML = `<strong>Perfil indicado:</strong> ${safe(path.perfil_indicado)}`;
-
-        const summary = document.createElement("p");
-        summary.textContent = safe(path.resumo);
-
-        const areas = document.createElement("p");
-        areas.innerHTML = `<strong>Áreas relacionadas:</strong> ${Array.isArray(path.area_relacionada) ? path.area_relacionada.map(safe).join(", ") : safe(path.area_relacionada)}`;
-
-        const stepsTitle = document.createElement("strong");
-        stepsTitle.textContent = "Primeiros passos";
-
-        const stepsList = document.createElement("ul");
-        if (Array.isArray(path.passos)) {
-          path.passos.slice(0, 3).forEach((step) => {
-            const li = document.createElement("li");
-            li.textContent = safe(step);
-            stepsList.appendChild(li);
-          });
-        }
-
-        const link = document.createElement("a");
-        link.className = "text-link";
-        link.href = "./career-areas.html";
-        link.textContent = "Explorar áreas relacionadas";
-
-        article.appendChild(title);
-        article.appendChild(profile);
-        article.appendChild(summary);
-        article.appendChild(areas);
-        article.appendChild(stepsTitle);
-        article.appendChild(stepsList);
-        article.appendChild(link);
-
-        fragment.appendChild(article);
-      });
-
-      container.appendChild(fragment);
-    }
-
-    function safe(value) {
-      if (value === null || value === undefined) return "";
-      return String(value).trim();
-    }
-  </script>
+  <script src="../assets/js/paths.js"></script>
   <script src="../assets/js/app.js"></script>
 </body>
 </html>

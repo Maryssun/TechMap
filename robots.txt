@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maryssun.github.io/TechMap/sitemap.xml

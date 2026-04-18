@@ -5,24 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="TechMap é um guia para ajudar pessoas a encontrarem caminhos reais na tecnologia com clareza, direção e visão prática de carreira."
+    content="TechMap é uma plataforma para ajudar pessoas a encontrarem caminhos reais na tecnologia com clareza, direção, estudos, áreas, ferramentas e comunidade."
   />
-  <meta name="theme-color" content="#111827" />
-  <title>TechMap | Conectando você a caminhos reais na tecnologia</title>
+  <meta name="theme-color" content="#081224" />
+  <title>TechMap | Caminhos reais na tecnologia</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="./assets/css/variables.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/css/layout.css" />
   <link rel="stylesheet" href="./assets/css/components.css" />
+  <link rel="stylesheet" href="./assets/css/layout.css" />
   <link rel="stylesheet" href="./assets/css/pages.css" />
   <link rel="stylesheet" href="./assets/css/responsive.css" />
+  <link rel="stylesheet" href="./assets/css/animations.css" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
@@ -30,6 +31,12 @@
   <header class="site-header">
     <div class="container header-content">
       <a href="./index.html" class="brand" aria-label="Página inicial do TechMap">
+        <span class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 3l7 4v5c0 4.5-2.9 7.9-7 9-4.1-1.1-7-4.5-7-9V7l7-4z"></path>
+            <path d="M9.5 12.5l1.7 1.7 3.5-4"></path>
+          </svg>
+        </span>
         <span class="brand-mark">TechMap</span>
       </a>
 
@@ -48,9 +55,12 @@
       <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="./index.html" class="active">Início</a></li>
-          <li><a href="./pages/discover.html">Descobrir caminho</a></li>
+          <li><a href="./pages/discover.html">Descobrir</a></li>
           <li><a href="./pages/career-areas.html">Áreas</a></li>
+          <li><a href="./pages/career-paths.html">Caminhos</a></li>
           <li><a href="./pages/study-guide.html">Estudos</a></li>
+          <li><a href="./pages/tools.html">Ferramentas</a></li>
+          <li><a href="./pages/resources.html">Recursos</a></li>
           <li><a href="./pages/communities.html">Comunidades</a></li>
           <li><a href="./pages/about.html">Sobre</a></li>
         </ul>
@@ -61,204 +71,465 @@
   <main id="main-content">
     <section class="hero-section">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Guia de carreira em tecnologia</span>
-          <h1>Conectando você a caminhos reais na tecnologia.</h1>
+        <div class="hero-copy animate-rise-up">
+          <span class="eyebrow">Plataforma de navegação em tecnologia</span>
+          <h1>Encontre caminhos reais na tecnologia com mais clareza.</h1>
           <p class="hero-text">
-            O TechMap organiza áreas, possibilidades de carreira, caminhos de estudo e recursos práticos
-            para quem quer entrar em tecnologia com mais clareza, menos confusão e mais direção.
+            O TechMap organiza descoberta de perfil, áreas, caminhos, estudos,
+            ferramentas, recursos e comunidade para ajudar você a sair da dúvida
+            e construir direção de forma mais visual, prática e estruturada.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="./pages/discover.html">Descobrir caminho</a>
+            <a class="btn btn-primary" href="./pages/discover.html">Descobrir meu caminho</a>
             <a class="btn btn-secondary" href="./pages/career-areas.html">Explorar áreas</a>
           </div>
 
-          <ul class="hero-highlights" aria-label="Destaques do TechMap">
-            <li>Áreas da tecnologia explicadas de forma simples</li>
-            <li>Mapas de carreira por perfil e interesse</li>
-            <li>Orientação sobre estudos, prática e próximos passos</li>
+          <ul class="hero-highlights" aria-label="Principais benefícios do TechMap">
+            <li>Descoberta guiada para quem ainda não sabe por onde começar</li>
+            <li>Áreas e caminhos organizados sem linguagem excessivamente técnica</li>
+            <li>Estudos, ferramentas e comunidade conectados em uma navegação única</li>
           </ul>
         </div>
 
-        <div class="hero-panel" aria-hidden="true">
-          <div class="hero-card hero-card-main">
-            <span class="hero-card-label">Ponto de partida</span>
-            <strong>Não sabe por onde começar?</strong>
-            <p>Entenda seu perfil, veja possibilidades e encontre um caminho mais coerente com você.</p>
-          </div>
-
-          <div class="hero-card-stack">
-            <div class="hero-card">
-              <span class="hero-card-label">Explorar</span>
-              <strong>Áreas</strong>
-              <p>Descubra o que existe além da ideia genérica de “trabalhar com tecnologia”.</p>
+        <div class="hero-panel reveal-right">
+          <article class="card card-glow">
+            <div class="card-header">
+              <span class="badge badge-primary">Ponto de partida</span>
+              <span class="badge badge-success">mais clareza</span>
             </div>
-            <div class="hero-card">
-              <span class="hero-card-label">Construir</span>
-              <strong>Plano</strong>
-              <p>Transforme interesse em direção prática com estudo, ferramentas e próximos passos.</p>
+
+            <div class="stack-md">
+              <h2 class="card-title">Você não precisa começar sabendo tudo.</h2>
+              <p class="card-description">
+                O que você precisa é de uma estrutura melhor para entender seu perfil,
+                comparar possibilidades e transformar interesse em direção prática.
+              </p>
+            </div>
+          </article>
+
+          <div class="grid-2">
+            <article class="card hover-glow-soft">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="M20 20l-3.5-3.5"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Descobrir por perfil</h3>
+              <p class="card-description">
+                Entenda como você pensa, aprende e trabalha antes de escolher um caminho.
+              </p>
+            </article>
+
+            <article class="card hover-glow-soft">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 7h16"></path>
+                  <path d="M4 12h16"></path>
+                  <path d="M4 17h16"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Explorar possibilidades</h3>
+              <p class="card-description">
+                Navegue por áreas, estudos e recursos sem depender só de nomes de cargos.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Visão geral</span>
+              <h2>O TechMap organiza a jornada em blocos que realmente ajudam.</h2>
+              <p>
+                Em vez de deixar tudo misturado, a plataforma separa descoberta,
+                área, caminho, estudo, ferramenta, recurso e comunidade.
+              </p>
+            </div>
+
+            <a class="text-link" href="./pages/about.html">
+              Entender o projeto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 12h14"></path>
+                <path d="M13 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card card hover-lift">
+              <div class="card-header">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z"></path>
+                  </svg>
+                </div>
+                <span class="badge badge-primary">01</span>
+              </div>
+              <strong class="card-title">Descobrir</strong>
+              <p class="card-description">
+                Comece identificando afinidades, estilo de trabalho e direção inicial.
+              </p>
+            </article>
+
+            <article class="stat-card card hover-lift">
+              <div class="card-header">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M3 7h18"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="M3 17h18"></path>
+                  </svg>
+                </div>
+                <span class="badge badge-primary">02</span>
+              </div>
+              <strong class="card-title">Explorar</strong>
+              <p class="card-description">
+                Compare áreas e caminhos para entender diferenças reais entre possibilidades.
+              </p>
+            </article>
+
+            <article class="stat-card card hover-lift">
+              <div class="card-header">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 00-3 3V4z"></path>
+                    <path d="M8 4v19"></path>
+                  </svg>
+                </div>
+                <span class="badge badge-primary">03</span>
+              </div>
+              <strong class="card-title">Estruturar</strong>
+              <p class="card-description">
+                Conecte a direção escolhida com estudos, ferramentas e prática.
+              </p>
+            </article>
+
+            <article class="stat-card card hover-lift">
+              <div class="card-header">
+                <div class="icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 010 7.75"></path>
+                  </svg>
+                </div>
+                <span class="badge badge-primary">04</span>
+              </div>
+              <strong class="card-title">Aproximar</strong>
+              <p class="card-description">
+                Use comunidade e ecossistema para acelerar aprendizado e repertório.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Navegação principal</span>
+              <h2>Escolha por onde começar e avance com mais lógica.</h2>
+              <p>
+                A ideia do TechMap é transformar curiosidade em direção, e não só acumular informação.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="intro-section">
-      <div class="container intro-grid">
-        <div>
-          <span class="section-kicker">O que é o TechMap</span>
-          <h2>Um guia estruturado para quem quer entrar na tecnologia com mais clareza.</h2>
-        </div>
+          <div class="explore-grid">
+            <a href="./pages/discover.html" class="explore-card card link-card hover-lift">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <path d="M20 20l-3.5-3.5"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Descobrir por perfil</h3>
+              <p class="card-description">
+                Responda a descoberta guiada e veja áreas mais alinhadas ao seu perfil.
+              </p>
+              <div class="inline-actions">
+                <span class="tag">questionário</span>
+                <span class="tag">afinidade</span>
+                <span class="tag">clareza</span>
+              </div>
+              <span class="text-link">Abrir descoberta</span>
+            </a>
 
-        <div class="intro-text-group">
-          <p>
-            O TechMap foi pensado para reunir, organizar e traduzir caminhos reais dentro da tecnologia.
-            Em vez de deixar a pessoa perdida entre cursos, cargos e promessas genéricas, a proposta é
-            mostrar possibilidades de forma prática, direta e utilizável.
-          </p>
-          <p>
-            Aqui, você encontra áreas, trilhas iniciais, sugestões de estudo, formatos de formação e
-            referências que ajudam a transformar curiosidade em direção.
-          </p>
-        </div>
-      </div>
-    </section>
+            <a href="./pages/career-areas.html" class="explore-card card link-card hover-lift">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 7h16"></path>
+                  <path d="M4 12h16"></path>
+                  <path d="M4 17h16"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Explorar áreas</h3>
+              <p class="card-description">
+                Veja o que cada área faz, quais perfis combinam e como começar.
+              </p>
+              <div class="inline-actions">
+                <span class="tag">áreas</span>
+                <span class="tag">rotina</span>
+                <span class="tag">entrada</span>
+              </div>
+              <span class="text-link">Ver áreas</span>
+            </a>
 
-    <section class="journey-section">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Como o TechMap ajuda</span>
-          <h2>Um caminho mais organizado para sair da dúvida e começar com mais sentido.</h2>
-        </div>
+            <a href="./pages/career-paths.html" class="explore-card card link-card hover-lift">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 19c5-8 11-8 16-14"></path>
+                  <path d="M14 5h6v6"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Explorar caminhos</h3>
+              <p class="card-description">
+                Entenda direções possíveis a partir do seu jeito de pensar e trabalhar.
+              </p>
+              <div class="inline-actions">
+                <span class="tag">perfil</span>
+                <span class="tag">caminho</span>
+                <span class="tag">direção</span>
+              </div>
+              <span class="text-link">Ver caminhos</span>
+            </a>
 
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-step">01</span>
-            <h3>Entenda seu momento</h3>
-            <p>
-              Comece identificando seu perfil, seus interesses e o tipo de rotina com que você mais combina.
-            </p>
-          </article>
+            <a href="./pages/study-guide.html" class="explore-card card link-card hover-lift">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 00-3 3V4z"></path>
+                  <path d="M8 4v19"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Estudos e formação</h3>
+              <p class="card-description">
+                Descubra o que estudar, como montar rotina e como pensar formação.
+              </p>
+              <div class="inline-actions">
+                <span class="tag">estudos</span>
+                <span class="tag">rotina</span>
+                <span class="tag">formação</span>
+              </div>
+              <span class="text-link">Ver estudos</span>
+            </a>
 
-          <article class="feature-card">
-            <span class="feature-step">02</span>
-            <h3>Explore áreas reais</h3>
-            <p>
-              Veja o que cada área faz na prática, quais habilidades aparecem no dia a dia e que perfis costumam se encaixar melhor.
-            </p>
-          </article>
+            <a href="./pages/tools.html" class="explore-card card link-card hover-lift">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 005.4-5.4l-3.1 3.1-2.2-2.2 2.3-3.9z"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Ferramentas</h3>
+              <p class="card-description">
+                Entenda onde ferramentas aparecem e por que fazem sentido em contexto real.
+              </p>
+              <div class="inline-actions">
+                <span class="tag">prática</span>
+                <span class="tag">uso real</span>
+                <span class="tag">contexto</span>
+              </div>
+              <span class="text-link">Ver ferramentas</span>
+            </a>
 
-          <article class="feature-card">
-            <span class="feature-step">03</span>
-            <h3>Encontre o que estudar</h3>
-            <p>
-              Descubra o que faz sentido aprender primeiro, como evoluir e quando vale a pena investir em diferentes formatos de formação.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-step">04</span>
-            <h3>Aproxime-se do mercado</h3>
-            <p>
-              Conheça comunidades, grupos, iniciativas e oportunidades que ajudam a sair do isolamento e ganhar repertório.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="entry-section">
-      <div class="container entry-grid">
-        <div class="entry-copy">
-          <span class="section-kicker">Encontre seu ponto de partida</span>
-          <h2>Quando você não sabe por onde começar, começar pelo básico já é um avanço.</h2>
-          <p>
-            O botão abaixo leva para uma página de descoberta com questionário orientador, apoio para reflexão de carreira
-            e recursos para ajudar você a visualizar possibilidades dentro da tecnologia.
-          </p>
-          <a class="btn btn-primary" href="./pages/discover.html">Começar descoberta</a>
-        </div>
-
-        <aside class="entry-box" aria-label="Resumo da página de descoberta">
-          <div class="mini-code-card">
-            <span class="mini-code-file">discover.html</span>
-            <pre><code>const objetivo = "sair da dúvida";
-const próximoPasso = "entender perfil";
-const resultado = "direção com mais clareza";
-
-console.log(resultado);</code></pre>
+            <a href="./pages/resources.html" class="explore-card card link-card hover-lift">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 20l8-16 8 16"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Recursos de apoio</h3>
+              <p class="card-description">
+                Acesse materiais, mapas, guias e referências para continuar avançando.
+              </p>
+              <div class="inline-actions">
+                <span class="tag">guias</span>
+                <span class="tag">mapas</span>
+                <span class="tag">apoio</span>
+              </div>
+              <span class="text-link">Ver recursos</span>
+            </a>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
-    <section class="overview-section">
+    <section class="home-section">
       <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">O que você vai encontrar</span>
-          <h2>Conteúdo organizado para acolher a tecnologia de forma mais completa.</h2>
-        </div>
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Jornada do usuário</span>
+              <h2>Uma navegação pensada para reduzir ruído e aumentar direção.</h2>
+              <p>
+                O TechMap não foi feito para despejar conteúdo. Foi feito para ajudar você a avançar em etapas.
+              </p>
+            </div>
+          </div>
 
-        <div class="overview-grid">
-          <article class="overview-card">
-            <h3>Áreas da tecnologia</h3>
-            <p>Entenda o que existe dentro da tecnologia e o que cada frente costuma fazer na prática.</p>
-            <a href="./pages/career-areas.html">Ver áreas</a>
-          </article>
+          <div class="path-grid">
+            <article class="journey-card card hover-lift">
+              <span class="badge badge-primary">PASSO 01</span>
+              <h3 class="card-title">Descobrir</h3>
+              <p class="card-description">
+                Entenda perfil, interesses e o tipo de desafio que mais chama sua atenção.
+              </p>
+            </article>
 
-          <article class="overview-card">
-            <h3>Caminhos de carreira</h3>
-            <p>Veja possibilidades por perfil, interesse e estilo de trabalho, não apenas por nome de cargo.</p>
-            <a href="./pages/career-paths.html">Ver caminhos</a>
-          </article>
+            <article class="journey-card card hover-lift">
+              <span class="badge badge-primary">PASSO 02</span>
+              <h3 class="card-title">Comparar</h3>
+              <p class="card-description">
+                Explore áreas e caminhos para enxergar diferenças reais entre possibilidades.
+              </p>
+            </article>
 
-          <article class="overview-card">
-            <h3>Estudos e formação</h3>
-            <p>Descubra quando faz sentido faculdade, tecnólogo, certificação, pós, MBA ou estudo guiado.</p>
-            <a href="./pages/study-guide.html">Ver estudos</a>
-          </article>
+            <article class="journey-card card hover-lift">
+              <span class="badge badge-primary">PASSO 03</span>
+              <h3 class="card-title">Estruturar</h3>
+              <p class="card-description">
+                Relacione a direção escolhida com estudos, ferramentas e prática inicial.
+              </p>
+            </article>
 
-          <article class="overview-card">
-            <h3>Comunidades e oportunidades</h3>
-            <p>Encontre iniciativas, grupos, bootcamps e espaços de troca que aproximam você do ecossistema.</p>
-            <a href="./pages/communities.html">Ver iniciativas</a>
-          </article>
+            <article class="journey-card card hover-lift">
+              <span class="badge badge-primary">PASSO 04</span>
+              <h3 class="card-title">Aproximar</h3>
+              <p class="card-description">
+                Use comunidades, recursos e ecossistema para construir repertório real.
+              </p>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="about-preview-section">
-      <div class="container about-preview-grid">
-        <div class="about-photo-placeholder" aria-hidden="true">
-          <span>Maryssol</span>
-        </div>
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Mais contexto</span>
+              <h2>Uma plataforma para orientar, não só para listar conteúdo.</h2>
+              <p>
+                O TechMap junta descoberta, carreira, estudo e ecossistema em uma estrutura mais visual e navegável.
+              </p>
+            </div>
 
-        <div class="about-preview-copy">
-          <span class="section-kicker">Por trás do projeto</span>
-          <h2>O TechMap nasce da vontade de transformar excesso de informação em direção prática.</h2>
-          <p>
-            Ao longo da trajetória apoiando pessoas e observando movimentos dentro da tecnologia, ficou evidente um padrão:
-            muitas vezes, o que falta não é vontade de aprender, mas clareza para entender o cenário e escolher um próximo passo possível.
-          </p>
-          <p>
-            O TechMap organiza esse cenário para tornar a entrada na tecnologia mais simples, mais humana e mais estratégica.
-          </p>
-          <a class="text-link" href="./pages/about.html">Ler mais sobre o projeto</a>
+            <a class="text-link" href="./pages/about.html">
+              Ver página sobre o projeto
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M5 12h14"></path>
+                <path d="M13 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="info-grid">
+            <article class="home-info-card card">
+              <h3 class="card-title">O que você encontra aqui</h3>
+              <p class="card-description">
+                A proposta do TechMap é ajudar a navegar pela tecnologia de forma mais humana e estratégica.
+              </p>
+
+              <ul class="list-icon">
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M12 5v14"></path>
+                      <path d="M5 12h14"></path>
+                    </svg>
+                  </span>
+                  Descoberta guiada para quem ainda está em dúvida.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M4 7h16"></path>
+                      <path d="M4 12h16"></path>
+                      <path d="M4 17h16"></path>
+                    </svg>
+                  </span>
+                  Áreas e caminhos organizados com linguagem mais clara.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 00-3 3V4z"></path>
+                    </svg>
+                  </span>
+                  Estudos, ferramentas e recursos conectados ao contexto.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2"></path>
+                      <circle cx="9" cy="7" r="4"></circle>
+                    </svg>
+                  </span>
+                  Comunidades e referências para aproximar você do ecossistema.
+                </li>
+              </ul>
+            </article>
+
+            <article class="home-info-card card">
+              <h3 class="card-title">Perguntas frequentes</h3>
+
+              <div class="stack-md">
+                <div class="faq-item">
+                  <strong>Preciso saber programar para entrar na tecnologia?</strong>
+                  <p>
+                    Não. Existem caminhos ligados a análise, UX, governança, projetos, dados e outras frentes.
+                  </p>
+                </div>
+
+                <div class="faq-item">
+                  <strong>Posso me identificar com mais de uma área?</strong>
+                  <p>
+                    Sim. O objetivo é ajudar a enxergar afinidades e definir uma direção inicial, não te limitar.
+                  </p>
+                </div>
+
+                <div class="faq-item">
+                  <strong>O TechMap substitui cursos ou formação?</strong>
+                  <p>
+                    Não. Ele organiza a navegação para ajudar você a escolher melhor o que estudar e como avançar.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="cta-section">
-      <div class="container cta-box">
-        <div>
-          <span class="section-kicker">Próximo passo</span>
-          <h2>Comece pela descoberta e depois avance com mais segurança.</h2>
-          <p>
-            Você não precisa saber tudo agora. Precisa apenas encontrar um ponto de partida mais coerente.
-          </p>
+      <div class="container">
+        <div class="cta-box reveal-zoom">
+          <div>
+            <span class="section-kicker">Próximo movimento</span>
+            <h2>Comece pela descoberta e transforme interesse em direção prática.</h2>
+            <p>
+              Você não precisa resolver toda a sua carreira hoje. Só precisa de uma estrutura melhor
+              para entender para onde olhar primeiro.
+            </p>
+          </div>
+
+          <div class="inline-actions">
+            <a class="btn btn-primary" href="./pages/discover.html">Ir para descoberta</a>
+            <a class="btn btn-secondary" href="./pages/career-paths.html">Ver caminhos</a>
+          </div>
         </div>
-        <a class="btn btn-primary" href="./pages/discover.html">Ir para descoberta</a>
       </div>
     </section>
   </main>
@@ -267,31 +538,26 @@ console.log(resultado);</code></pre>
     <div class="container footer-content">
       <div>
         <strong>TechMap</strong>
-        <p>Conectando você a caminhos reais na tecnologia.</p>
+        <p>
+          Conectando você a caminhos reais na tecnologia com mais clareza, contexto e direção.
+        </p>
       </div>
 
       <nav aria-label="Links do rodapé">
         <ul>
-          <li><a href="./pages/about.html">Sobre</a></li>
           <li><a href="./pages/discover.html">Descobrir caminho</a></li>
           <li><a href="./pages/career-areas.html">Áreas</a></li>
+          <li><a href="./pages/career-paths.html">Caminhos</a></li>
           <li><a href="./pages/study-guide.html">Estudos</a></li>
+          <li><a href="./pages/tools.html">Ferramentas</a></li>
+          <li><a href="./pages/resources.html">Recursos</a></li>
+          <li><a href="./pages/communities.html">Comunidades</a></li>
+          <li><a href="./pages/about.html">Sobre</a></li>
         </ul>
       </nav>
     </div>
   </footer>
 
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const primaryNav = document.querySelector('.primary-nav');
-
-    if (menuToggle && primaryNav) {
-      menuToggle.addEventListener('click', () => {
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', String(!expanded));
-        primaryNav.classList.toggle('is-open');
-      });
-    }
-  </script>
+  <script src="./assets/js/app.js"></script>
 </body>
 </html>

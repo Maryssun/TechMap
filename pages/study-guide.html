@@ -5,48 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Descubra o que estudar para entrar na tecnologia, como montar uma rotina de estudos e quais caminhos de formação fazem sentido."
+    content="Descubra o que estudar para entrar na tecnologia, como montar uma rotina e como escolher entre faculdade, cursos, certificações e prática."
   />
-  <meta name="theme-color" content="#0f172a" />
-  <title>TechMap | Guia de Estudos</title>
+  <meta name="theme-color" content="#081224" />
+  <title>Guia de estudos | TechMap</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="../assets/css/variables.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/pages.css" />
   <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
 </head>
 
 <body>
   <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-content">
-      <a href="../index.html" class="brand">
+      <a href="../index.html" class="brand" aria-label="Página inicial do TechMap">
+        <span class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 3l7 4v5c0 4.5-2.9 7.9-7 9-4.1-1.1-7-4.5-7-9V7l7-4z"></path>
+            <path d="M9.5 12.5l1.7 1.7 3.5-4"></path>
+          </svg>
+        </span>
         <span class="brand-mark">TechMap</span>
       </a>
 
-      <button class="menu-toggle" aria-expanded="false">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu de navegação"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
         <span></span>
         <span></span>
         <span></span>
       </button>
 
-      <nav class="primary-nav">
+      <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="../index.html">Início</a></li>
-          <li><a href="./discover.html">Descobrir caminho</a></li>
+          <li><a href="./discover.html">Descobrir</a></li>
           <li><a href="./career-areas.html">Áreas</a></li>
+          <li><a href="./career-paths.html">Caminhos</a></li>
           <li><a href="./study-guide.html" class="active">Estudos</a></li>
+          <li><a href="./tools.html">Ferramentas</a></li>
+          <li><a href="./resources.html">Recursos</a></li>
           <li><a href="./communities.html">Comunidades</a></li>
           <li><a href="./about.html">Sobre</a></li>
         </ul>
@@ -54,201 +69,407 @@
     </div>
   </header>
 
-  <!-- MAIN -->
   <main id="main-content">
-
-    <!-- HERO -->
     <section class="hero-section">
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Guia prático</span>
-          <h1>O que estudar para entrar na tecnologia de forma mais estratégica.</h1>
-
+        <div class="hero-copy animate-rise-up">
+          <span class="eyebrow">Guia de estudos</span>
+          <h1>Estude com mais direção, não com excesso de conteúdo.</h1>
           <p class="hero-text">
-            Não é sobre estudar tudo. É sobre estudar o que faz sentido,
-            na ordem certa, com foco em aplicar e evoluir.
+            Entrar na tecnologia não exige estudar tudo. Exige entender o que vem primeiro,
+            o que faz sentido para o seu caminho e como transformar estudo em prática real.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#inicio">Por onde começar</a>
-            <a class="btn btn-secondary" href="#formacao">Tipos de formação</a>
+            <a class="btn btn-primary" href="#por-onde-comecar">Por onde começar</a>
+            <a class="btn btn-secondary" href="./career-paths.html">Voltar para caminhos</a>
           </div>
 
-          <ul class="hero-highlights">
-            <li>Clareza do que estudar primeiro</li>
-            <li>Diferença entre tipos de formação</li>
-            <li>Como montar uma rotina eficiente</li>
+          <ul class="hero-highlights" aria-label="Destaques do guia de estudos">
+            <li>Descubra o que estudar primeiro sem tentar aprender tudo de uma vez</li>
+            <li>Entenda quando faculdade, curso, certificação e prática fazem sentido</li>
+            <li>Monte uma rotina mais realista e sustentável</li>
           </ul>
         </div>
 
-        <div class="hero-panel">
-          <div class="hero-card hero-card-main">
-            <span class="hero-card-label">Realidade</span>
-            <strong>Você não precisa saber tudo para começar.</strong>
+        <div class="hero-panel reveal-right">
+          <article class="card card-glow">
+            <div class="card-header">
+              <span class="badge badge-primary">Ideia central</span>
+              <span class="badge badge-success">mais foco</span>
+            </div>
+
+            <div class="stack-md">
+              <h2 class="card-title">Direção antes de profundidade.</h2>
+              <p class="card-description">
+                Antes de estudar muito, é melhor estudar certo. A base certa evita
+                dispersão, frustração e acúmulo de conteúdo sem aplicação.
+              </p>
+            </div>
+          </article>
+
+          <div class="grid-2">
+            <article class="card hover-glow-soft">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 00-3 3V4z"></path>
+                  <path d="M8 4v19"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Estudo com lógica</h3>
+              <p class="card-description">
+                Organize a base antes de mergulhar em especializações ou ferramentas demais.
+              </p>
+            </article>
+
+            <article class="card hover-glow-soft">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 20v-6"></path>
+                  <path d="M8 20h8"></path>
+                  <path d="M7 10a5 5 0 0110 0c0 1.8-.8 2.8-1.7 3.8-.8.9-1.6 1.7-1.8 3.2h-3c-.2-1.5-1-2.3-1.8-3.2C7.8 12.8 7 11.8 7 10z"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Aplicação real</h3>
+              <p class="card-description">
+                O estudo fica mais forte quando é conectado a prática, projeto e contexto.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="por-onde-comecar" class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Primeiro passo</span>
+              <h2>Por onde começar nos estudos</h2>
+              <p>
+                Independentemente da área, existe uma lógica que ajuda a construir base
+                sem tentar abraçar tudo ao mesmo tempo.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-2">
+            <article class="study-block">
+              <h3>1. Entenda a base do caminho escolhido</h3>
+              <p>
+                Antes de correr para ferramentas avançadas, entenda o básico da área:
+                conceitos, rotina, linguagem e finalidade.
+              </p>
+            </article>
+
+            <article class="study-block">
+              <h3>2. Aprenda praticando desde cedo</h3>
+              <p>
+                Tecnologia pede aplicação. Mesmo no começo, é importante testar, montar,
+                experimentar e construir pequenas entregas.
+              </p>
+            </article>
+
+            <article class="study-block">
+              <h3>3. Evite estudar muitas áreas ao mesmo tempo</h3>
+              <p>
+                Explorar é saudável, mas aprofundar em várias direções ao mesmo tempo costuma
+                gerar dispersão e cansaço.
+              </p>
+            </article>
+
+            <article class="study-block">
+              <h3>4. Crie uma base antes de buscar especialização</h3>
+              <p>
+                Quando a base fica clara, as decisões seguintes ficam melhores e o estudo rende mais.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Sequência sugerida</span>
+              <h2>Uma estrutura simples para organizar a aprendizagem.</h2>
+              <p>
+                Você não precisa seguir isso de forma rígida, mas essa lógica costuma funcionar bem.
+              </p>
+            </div>
+          </div>
+
+          <div class="path-grid">
+            <article class="journey-card card hover-lift">
+              <span class="badge badge-primary">ETAPA 01</span>
+              <h3 class="card-title">Entender</h3>
+              <p class="card-description">
+                Aprenda o que é a área, para que serve e onde ela aparece no mundo real.
+              </p>
+            </article>
+
+            <article class="journey-card card hover-lift">
+              <span class="badge badge-primary">ETAPA 02</span>
+              <h3 class="card-title">Estudar a base</h3>
+              <p class="card-description">
+                Foque em conceitos essenciais antes de correr para ferramentas complexas.
+              </p>
+            </article>
+
+            <article class="journey-card card hover-lift">
+              <span class="badge badge-primary">ETAPA 03</span>
+              <h3 class="card-title">Praticar</h3>
+              <p class="card-description">
+                Transforme estudo em alguma atividade concreta, mesmo que simples.
+              </p>
+            </article>
+
+            <article class="journey-card card hover-lift">
+              <span class="badge badge-primary">ETAPA 04</span>
+              <h3 class="card-title">Aprofundar</h3>
+              <p class="card-description">
+                Depois da base, aí sim entram especializações, ferramentas e maior complexidade.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Tipos de formação</span>
+              <h2>Nem todo formato de estudo serve para a mesma necessidade.</h2>
+              <p>
+                Faculdade, tecnólogo, pós, certificação, bootcamp e curso livre
+                têm funções diferentes na jornada.
+              </p>
+            </div>
+          </div>
+
+          <div class="overview-grid">
+            <article class="learning-card card hover-lift">
+              <span>BASE E LONGO PRAZO</span>
+              <h3 class="card-title">Faculdade</h3>
+              <p class="card-description">
+                Boa para quem quer estrutura mais sólida, repertório amplo e formação mais completa.
+              </p>
+            </article>
+
+            <article class="learning-card card hover-lift">
+              <span>FOCO MAIS RÁPIDO</span>
+              <h3 class="card-title">Tecnólogo</h3>
+              <p class="card-description">
+                Costuma ser mais enxuto e voltado ao mercado, mantendo uma formação formal.
+              </p>
+            </article>
+
+            <article class="learning-card card hover-lift">
+              <span>APROFUNDAMENTO</span>
+              <h3 class="card-title">Pós-graduação</h3>
+              <p class="card-description">
+                Faz mais sentido quando você já tem uma base e quer aprofundar um tema específico.
+              </p>
+            </article>
+
+            <article class="learning-card card hover-lift">
+              <span>VALIDAÇÃO</span>
+              <h3 class="card-title">Certificações</h3>
+              <p class="card-description">
+                Boas para validar conhecimento, principalmente em contextos técnicos e corporativos.
+              </p>
+            </article>
+
+            <article class="learning-card card hover-lift">
+              <span>INTENSIDADE</span>
+              <h3 class="card-title">Bootcamps</h3>
+              <p class="card-description">
+                Úteis para prática concentrada, aceleração e primeiros projetos mais aplicados.
+              </p>
+            </article>
+
+            <article class="learning-card card hover-lift">
+              <span>INÍCIO FLEXÍVEL</span>
+              <h3 class="card-title">Cursos livres</h3>
+              <p class="card-description">
+                Bons para começar, testar interesse e aprender uma base sem travar na formalidade.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Rotina</span>
+              <h2>Como montar um ritmo de estudo mais sustentável.</h2>
+              <p>
+                O problema não costuma ser só falta de conteúdo. Muitas vezes é falta de organização do esforço.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-grid">
+            <article class="home-info-card card">
+              <h3 class="card-title">O que costuma funcionar melhor</h3>
+              <ul class="list-icon">
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M12 5v14"></path>
+                      <path d="M5 12h14"></path>
+                    </svg>
+                  </span>
+                  Estudar um pouco com constância em vez de estudar muito e parar.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M4 7h16"></path>
+                      <path d="M4 12h16"></path>
+                      <path d="M4 17h16"></path>
+                    </svg>
+                  </span>
+                  Combinar teoria, prática e revisão em vez de só consumir conteúdo.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 00-3 3V4z"></path>
+                    </svg>
+                  </span>
+                  Ter um objetivo pequeno por ciclo ajuda mais do que um plano gigante.
+                </li>
+              </ul>
+            </article>
+
+            <article class="home-info-card card">
+              <h3 class="card-title">O que costuma atrapalhar</h3>
+              <ul class="list-icon">
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M18 6L6 18"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>
+                  </span>
+                  Tentar estudar muitas áreas ao mesmo tempo.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M18 6L6 18"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>
+                  </span>
+                  Consumir curso atrás de curso sem colocar nada em prática.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M18 6L6 18"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>
+                  </span>
+                  Basear decisões apenas em hype e comparação com outras pessoas.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Regra prática</span>
+              <h2>Estudo bom é estudo que te move para frente.</h2>
+              <p>
+                O objetivo não é parecer produtivo. É construir repertório real, com compreensão e aplicação.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <article class="card hover-lift">
+              <h3 class="card-title">Aprender</h3>
+              <p class="card-description">
+                Entenda o conceito e a lógica por trás daquilo que está estudando.
+              </p>
+            </article>
+
+            <article class="card hover-lift">
+              <h3 class="card-title">Aplicar</h3>
+              <p class="card-description">
+                Crie algo, teste uma ferramenta, simule um caso, escreva, organize, monte.
+              </p>
+            </article>
+
+            <article class="card hover-lift">
+              <h3 class="card-title">Evoluir</h3>
+              <p class="card-description">
+                Ajuste o caminho com base no que você descobriu sobre si e sobre a prática.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box reveal-zoom">
+          <div>
+            <span class="section-kicker">Próximo passo</span>
+            <h2>Depois dos estudos, conecte o que aprendeu com ferramentas e contexto real.</h2>
             <p>
-              Você precisa de um ponto de partida claro e consistência
-              para evoluir com prática.
+              Agora faz sentido entender que ferramentas aparecem no dia a dia das áreas e como elas são usadas na prática.
             </p>
           </div>
+
+          <div class="inline-actions">
+            <a class="btn btn-primary" href="./tools.html">Ver ferramentas</a>
+            <a class="btn btn-secondary" href="./resources.html">Ver recursos</a>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- INÍCIO -->
-    <section id="inicio">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Passo inicial</span>
-          <h2>Por onde começar nos estudos</h2>
-        </div>
-
-        <div class="study-block">
-          <h3>1. Entenda a base</h3>
-          <p>
-            Antes de qualquer especialização, entenda conceitos básicos da área
-            que você escolheu.
-          </p>
-        </div>
-
-        <div class="study-block">
-          <h3>2. Aprenda fazendo</h3>
-          <p>
-            A tecnologia exige prática. Estudar sem aplicar dificulta evolução.
-          </p>
-        </div>
-
-        <div class="study-block">
-          <h3>3. Não tente aprender tudo</h3>
-          <p>
-            Escolha um caminho inicial e aprofunde. Generalização vem depois.
-          </p>
-        </div>
-
-        <div class="study-block">
-          <h3>4. Crie projetos</h3>
-          <p>
-            Projetos mostram evolução e ajudam a consolidar conhecimento.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ROTINA -->
-    <section>
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Organização</span>
-          <h2>Como montar uma rotina de estudos</h2>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3>Consistência</h3>
-            <p>Estudar um pouco todos os dias é mais eficaz do que estudar muito de forma irregular.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Equilíbrio</h3>
-            <p>Combine teoria, prática e revisão.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Ambiente</h3>
-            <p>Tenha um espaço organizado para estudar.</p>
-          </article>
-
-          <article class="feature-card">
-            <h3>Foco</h3>
-            <p>Evite estudar muitas áreas ao mesmo tempo.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- FORMAÇÃO -->
-    <section id="formacao">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Formação</span>
-          <h2>Tipos de estudo e quando fazem sentido</h2>
-        </div>
-
-        <div class="overview-grid">
-
-          <div class="overview-card">
-            <h3>Faculdade</h3>
-            <p>Boa para base sólida e longo prazo.</p>
-          </div>
-
-          <div class="overview-card">
-            <h3>Tecnólogo</h3>
-            <p>Mais rápido e focado no mercado.</p>
-          </div>
-
-          <div class="overview-card">
-            <h3>Pós-graduação</h3>
-            <p>Aprofundamento em uma área específica.</p>
-          </div>
-
-          <div class="overview-card">
-            <h3>Certificações</h3>
-            <p>Comprovação prática de conhecimento.</p>
-          </div>
-
-          <div class="overview-card">
-            <h3>Bootcamps</h3>
-            <p>Aprendizado intensivo e prático.</p>
-          </div>
-
-          <div class="overview-card">
-            <h3>Cursos livres</h3>
-            <p>Flexíveis e ideais para começar.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-section">
-      <div class="container cta-box">
-        <div>
-          <span class="section-kicker">Próximo passo</span>
-          <h2>Agora conecte estudo com prática.</h2>
-          <p>
-            Aprender sozinho é importante, mas se conectar com outras pessoas
-            acelera muito o processo.
-          </p>
-        </div>
-
-        <a class="btn btn-primary" href="./communities.html">
-          Ver comunidades
-        </a>
-      </div>
-    </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-content">
       <div>
         <strong>TechMap</strong>
-        <p>Conectando você a caminhos reais na tecnologia.</p>
+        <p>
+          Conectando você a caminhos reais na tecnologia com mais clareza, contexto e direção.
+        </p>
       </div>
 
-      <nav>
+      <nav aria-label="Links do rodapé">
         <ul>
+          <li><a href="./career-paths.html">Caminhos</a></li>
+          <li><a href="./tools.html">Ferramentas</a></li>
+          <li><a href="./resources.html">Recursos</a></li>
           <li><a href="./about.html">Sobre</a></li>
-          <li><a href="./career-areas.html">Áreas</a></li>
-          <li><a href="./discover.html">Descobrir</a></li>
         </ul>
       </nav>
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
   <script src="../assets/js/app.js"></script>
-
 </body>
 </html>

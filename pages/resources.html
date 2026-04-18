@@ -5,24 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta
     name="description"
-    content="Acesse recursos de apoio para explorar a tecnologia com mais clareza: guias, mapas, glossários, materiais gratuitos e referências úteis."
+    content="Acesse guias, mapas, glossários, materiais gratuitos e recursos de apoio para navegar melhor pela tecnologia."
   />
-  <meta name="theme-color" content="#0f172a" />
-  <title>TechMap | Recursos</title>
+  <meta name="theme-color" content="#081224" />
+  <title>Recursos | TechMap</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="../assets/css/variables.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
   <link rel="stylesheet" href="../assets/css/pages.css" />
   <link rel="stylesheet" href="../assets/css/responsive.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
 </head>
 <body>
   <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
@@ -30,6 +31,12 @@
   <header class="site-header">
     <div class="container header-content">
       <a href="../index.html" class="brand" aria-label="Página inicial do TechMap">
+        <span class="icon-box" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 3l7 4v5c0 4.5-2.9 7.9-7 9-4.1-1.1-7-4.5-7-9V7l7-4z"></path>
+            <path d="M9.5 12.5l1.7 1.7 3.5-4"></path>
+          </svg>
+        </span>
         <span class="brand-mark">TechMap</span>
       </a>
 
@@ -48,7 +55,7 @@
       <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
         <ul>
           <li><a href="../index.html">Início</a></li>
-          <li><a href="./discover.html">Descobrir caminho</a></li>
+          <li><a href="./discover.html">Descobrir</a></li>
           <li><a href="./career-areas.html">Áreas</a></li>
           <li><a href="./career-paths.html">Caminhos</a></li>
           <li><a href="./study-guide.html">Estudos</a></li>
@@ -64,283 +71,364 @@
   <main id="main-content">
     <section class="hero-section">
       <div class="container hero-grid">
-        <div class="hero-copy">
+        <div class="hero-copy animate-rise-up">
           <span class="eyebrow">Base de apoio</span>
-          <h1>Recursos para estudar, entender e navegar melhor pela tecnologia.</h1>
-
+          <h1>Recursos para entender, organizar e continuar avançando.</h1>
           <p class="hero-text">
-            Esta página reúne materiais e estruturas úteis para apoiar sua jornada:
-            guias, mapas, glossários, referências, modelos e pontos de apoio para continuar avançando.
+            Esta página reúne tipos de materiais que ajudam a navegar melhor pela tecnologia:
+            guias, mapas, glossários, referências e estruturas de apoio para transformar dúvida em movimento.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#resource-groups">Explorar recursos</a>
-            <a class="btn btn-secondary" href="./study-guide.html">Voltar para estudos</a>
+            <a class="btn btn-primary" href="#blocos-de-recursos">Explorar recursos</a>
+            <a class="btn btn-secondary" href="./tools.html">Voltar para ferramentas</a>
           </div>
 
-          <ul class="hero-highlights" aria-label="Destaques da página">
-            <li>Recursos organizados por função de uso</li>
-            <li>Leitura mais clara do que vale a pena consultar</li>
-            <li>Apoio para transformar curiosidade em direção</li>
+          <ul class="hero-highlights" aria-label="Destaques da página de recursos">
+            <li>Use recursos como apoio de navegação, não como excesso de links</li>
+            <li>Entenda que tipo de material ajuda em cada momento da jornada</li>
+            <li>Monte uma base mais clara para continuar estudando e evoluindo</li>
           </ul>
         </div>
 
-        <div class="hero-panel" aria-hidden="true">
-          <div class="hero-card hero-card-main">
-            <span class="hero-card-label">Propósito</span>
-            <strong>Nem todo recurso serve para o mesmo momento.</strong>
-            <p>
-              Alguns ajudam a entender o cenário. Outros ajudam a estudar.
-              Outros ajudam a praticar ou a organizar a jornada.
-            </p>
-          </div>
-
-          <div class="hero-card-stack">
-            <div class="hero-card">
-              <span class="hero-card-label">Clareza</span>
-              <strong>Entender termos</strong>
-              <p>Glossários, mapas e guias ajudam a traduzir o ecossistema.</p>
+        <div class="hero-panel reveal-right">
+          <article class="card card-glow">
+            <div class="card-header">
+              <span class="badge badge-primary">Propósito</span>
+              <span class="badge badge-success">mais clareza</span>
             </div>
-            <div class="hero-card">
-              <span class="hero-card-label">Ação</span>
-              <strong>Seguir em frente</strong>
-              <p>Modelos e estruturas ajudam a sair da teoria e continuar avançando.</p>
+
+            <div class="stack-md">
+              <h2 class="card-title">Nem todo recurso serve para a mesma necessidade.</h2>
+              <p class="card-description">
+                Alguns materiais ajudam a entender o cenário. Outros ajudam a estudar.
+                Outros ajudam a praticar, organizar a rotina ou planejar o próximo passo.
+              </p>
+            </div>
+          </article>
+
+          <div class="grid-2">
+            <article class="card hover-glow-soft">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 00-3 3V4z"></path>
+                  <path d="M8 4v19"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Entender melhor</h3>
+              <p class="card-description">
+                Guias e glossários ajudam a traduzir o ecossistema.
+              </p>
+            </article>
+
+            <article class="card hover-glow-soft">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 20l8-16 8 16"></path>
+                </svg>
+              </div>
+              <h3 class="card-title">Continuar avançando</h3>
+              <p class="card-description">
+                Modelos e mapas ajudam a organizar a jornada com mais intenção.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Como usar esta página</span>
+              <h2>Escolha o recurso pelo momento em que você está.</h2>
+              <p>
+                Quando a pessoa está começando, é comum salvar muito conteúdo e mesmo assim continuar sem direção.
+                A proposta aqui é organizar os recursos por função.
+              </p>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="intro-section">
-      <div class="container intro-grid">
-        <div>
-          <span class="section-kicker">Como usar esta página</span>
-          <h2>Use os recursos como apoio de navegação, não como excesso de conteúdo.</h2>
-        </div>
+          <div class="feature-grid">
+            <article class="feature-card card hover-lift">
+              <span class="feature-step">01</span>
+              <h3 class="card-title">Guias</h3>
+              <p class="card-description">
+                Ajudam a organizar entendimento e orientar primeiros passos.
+              </p>
+            </article>
 
-        <div class="intro-text-group">
-          <p>
-            Quando a pessoa está começando, é comum abrir muitos links, salvar muitos materiais
-            e, no fim, sentir que continua sem direção.
-          </p>
-          <p>
-            O objetivo aqui é organizar os tipos de recurso de forma mais útil,
-            para que você saiba o que consultar conforme o seu momento.
-          </p>
-        </div>
-      </div>
-    </section>
+            <article class="feature-card card hover-lift">
+              <span class="feature-step">02</span>
+              <h3 class="card-title">Mapas</h3>
+              <p class="card-description">
+                Servem para visualizar áreas, caminhos, relações e evolução.
+              </p>
+            </article>
 
-    <section id="resource-groups">
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Tipos de recurso</span>
-          <h2>Recursos diferentes ajudam em necessidades diferentes.</h2>
-          <p>
-            Esta organização ajuda você a escolher o tipo de material mais adequado
-            para o que precisa agora.
-          </p>
-        </div>
+            <article class="feature-card card hover-lift">
+              <span class="feature-step">03</span>
+              <h3 class="card-title">Glossários</h3>
+              <p class="card-description">
+                Ajudam a traduzir termos e conceitos que aparecem com frequência.
+              </p>
+            </article>
 
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-step">01</span>
-            <h3>Guias</h3>
-            <p>
-              Ajudam a organizar entendimento, orientar passos e reduzir confusão inicial.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-step">02</span>
-            <h3>Mapas</h3>
-            <p>
-              Servem para visualizar áreas, caminhos, relações e possibilidades de evolução.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-step">03</span>
-            <h3>Glossários e referências</h3>
-            <p>
-              Apoiam a leitura de termos e conceitos que aparecem com frequência no ecossistema.
-            </p>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-step">04</span>
-            <h3>Modelos de apoio</h3>
-            <p>
-              Estruturas que ajudam a organizar estudo, carreira, prática e próximos passos.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Guias de orientação</span>
-          <h2>Materiais para entender melhor por onde começar.</h2>
-        </div>
-
-        <div class="overview-grid">
-          <article class="resource-card">
-            <strong>Guia de início na tecnologia</strong>
-            <p>Material ideal para quem quer organizar primeiros passos e não sabe o que priorizar.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Guia por área</strong>
-            <p>Ajuda a entender diferenças entre desenvolvimento, dados, UX, cloud, segurança e outras frentes.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Guia de estudos</strong>
-            <p>Ajuda a montar uma sequência mais coerente entre base, prática e aprofundamento.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Guia de transição</strong>
-            <p>Útil para quem já vem de outra área e quer entrar na tecnologia com mais estratégia.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Mapas e visualizações</span>
-          <h2>Recursos que ajudam a enxergar a tecnologia como ecossistema.</h2>
-        </div>
-
-        <div class="overview-grid">
-          <article class="resource-card">
-            <strong>Mapa de áreas da tecnologia</strong>
-            <p>Visão geral das principais frentes, suas diferenças e pontos de entrada.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Mapa de caminhos de carreira</strong>
-            <p>Ajuda a entender como perfis e interesses podem se conectar a direções possíveis.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Mapa de evolução de estudos</strong>
-            <p>Mostra como sair da base e avançar para níveis mais aplicados de aprendizagem.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Mapa de ferramentas por contexto</strong>
-            <p>Ajuda a entender onde cada ferramenta aparece e por que ela faz sentido.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Glossário e referências</span>
-          <h2>Recursos para traduzir a linguagem da tecnologia.</h2>
-        </div>
-
-        <div class="overview-grid">
-          <article class="resource-card">
-            <strong>Glossário de termos</strong>
-            <p>Explica palavras comuns do ecossistema tecnológico de forma mais acessível.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Referências por área</strong>
-            <p>Organiza temas, conceitos e materiais que aparecem com frequência em cada frente.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Leituras introdutórias</strong>
-            <p>Ajuda quem quer começar entendendo conceitos antes de entrar em prática mais pesada.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Materiais gratuitos</strong>
-            <p>Reúne conteúdos que podem ser usados sem custo para começar a explorar caminhos.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-heading">
-          <span class="section-kicker">Modelos de apoio</span>
-          <h2>Estruturas que ajudam a organizar sua jornada com mais clareza.</h2>
-        </div>
-
-        <div class="overview-grid">
-          <article class="resource-card">
-            <strong>Modelo de mapa de carreira</strong>
-            <p>Ajuda a organizar áreas de interesse, próximos passos e possibilidades de evolução.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Modelo de rotina de estudos</strong>
-            <p>Estrutura simples para distribuir teoria, prática, revisão e constância.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Modelo de acompanhamento</strong>
-            <p>Ajuda a registrar progresso, materiais estudados, projetos e próximos movimentos.</p>
-          </article>
-
-          <article class="resource-card">
-            <strong>Modelo de plano inicial</strong>
-            <p>Organiza um primeiro ciclo de aprendizagem para sair da dúvida e começar com foco.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="entry-section">
-      <div class="container entry-grid">
-        <div class="entry-copy">
-          <span class="section-kicker">Leitura importante</span>
-          <h2>Recurso bom é recurso que ajuda você a continuar, não a se perder mais.</h2>
-          <p>
-            Não é preciso consumir tudo. É mais útil escolher o tipo de recurso que responde
-            à sua necessidade atual e usar isso para avançar de forma prática.
-          </p>
-          <p>
-            Clareza não vem de acumular links. Vem de usar o material certo no momento certo.
-          </p>
-          <a class="btn btn-primary" href="./discover.html">Voltar para descoberta</a>
-        </div>
-
-        <aside class="entry-box" aria-label="Resumo da lógica da página">
-          <div class="mini-code-card">
-            <span class="mini-code-file">resources.html</span>
-            <pre><code>const recurso = "apoio";
-const uso = "entender e avançar";
-const clareza = "escolher melhor o que consultar";
-
-console.log(clareza);</code></pre>
+            <article class="feature-card card hover-lift">
+              <span class="feature-step">04</span>
+              <h3 class="card-title">Modelos</h3>
+              <p class="card-description">
+                Estruturas que ajudam a organizar estudo, prática e direção.
+              </p>
+            </article>
           </div>
-        </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="blocos-de-recursos" class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Tipos de recurso</span>
+              <h2>Materiais diferentes ajudam em necessidades diferentes.</h2>
+              <p>
+                Use esta leitura para identificar que tipo de apoio faz mais sentido agora.
+              </p>
+            </div>
+          </div>
+
+          <div class="overview-grid">
+            <article class="resource-card card hover-lift">
+              <strong>Guia de início na tecnologia</strong>
+              <p class="card-description">
+                Material útil para quem quer organizar primeiros passos e parar de estudar de forma aleatória.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Guia por área</strong>
+              <p class="card-description">
+                Ajuda a entender diferenças entre desenvolvimento, dados, UX, cloud, segurança e outras frentes.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Guia de estudos</strong>
+              <p class="card-description">
+                Organiza sequência de aprendizagem entre base, prática, aprofundamento e continuidade.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Guia de transição</strong>
+              <p class="card-description">
+                Apoia quem vem de outra área e quer entrar na tecnologia com mais estratégia.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Mapa de áreas da tecnologia</strong>
+              <p class="card-description">
+                Visão geral das principais frentes, suas diferenças e pontos de entrada.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Mapa de caminhos de carreira</strong>
+              <p class="card-description">
+                Ajuda a visualizar como perfis e interesses podem se conectar a direções possíveis.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Glossário de termos</strong>
+              <p class="card-description">
+                Explica palavras frequentes do ecossistema tecnológico de forma mais acessível.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Materiais gratuitos</strong>
+              <p class="card-description">
+                Reúne conteúdos úteis para começar sem depender de investimento imediato.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Modelo de mapa de carreira</strong>
+              <p class="card-description">
+                Estrutura para registrar áreas de interesse, próximos passos e possibilidades de evolução.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Modelo de rotina de estudos</strong>
+              <p class="card-description">
+                Ajuda a distribuir teoria, prática, revisão e constância de forma mais realista.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Modelo de acompanhamento</strong>
+              <p class="card-description">
+                Organiza progresso, estudos concluídos, projetos e próximos movimentos.
+              </p>
+            </article>
+
+            <article class="resource-card card hover-lift">
+              <strong>Plano inicial de aprendizagem</strong>
+              <p class="card-description">
+                Estrutura simples para sair da dúvida e começar com foco em uma direção clara.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Leitura importante</span>
+              <h2>Recurso bom é recurso que te faz continuar, não se perder mais.</h2>
+              <p>
+                Clareza não vem de acumular links. Vem de escolher o material certo para a necessidade certa.
+              </p>
+            </div>
+          </div>
+
+          <div class="info-grid">
+            <article class="home-info-card card">
+              <h3 class="card-title">O que costuma ajudar mais</h3>
+              <ul class="list-icon">
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M12 5v14"></path>
+                      <path d="M5 12h14"></path>
+                    </svg>
+                  </span>
+                  Usar recurso para responder uma necessidade específica.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M4 7h16"></path>
+                      <path d="M4 12h16"></path>
+                      <path d="M4 17h16"></path>
+                    </svg>
+                  </span>
+                  Relacionar leitura com uma ação prática depois.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M5 4h11a3 3 0 013 3v13H8a3 3 0 00-3 3V4z"></path>
+                    </svg>
+                  </span>
+                  Montar uma base de consulta leve e organizada.
+                </li>
+              </ul>
+            </article>
+
+            <article class="home-info-card card">
+              <h3 class="card-title">O que costuma atrapalhar</h3>
+              <ul class="list-icon">
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M18 6L6 18"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>
+                  </span>
+                  Salvar muito material e nunca voltar para ele.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M18 6L6 18"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>
+                  </span>
+                  Ler demais e praticar pouco.
+                </li>
+                <li>
+                  <span class="bullet" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <path d="M18 6L6 18"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>
+                  </span>
+                  Usar recurso como acúmulo em vez de apoio à decisão.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="container">
+        <div class="section-shell reveal">
+          <div class="section-top">
+            <div>
+              <span class="section-kicker">Regra prática</span>
+              <h2>Quanto mais claro o momento, melhor o uso do recurso.</h2>
+              <p>
+                Antes de abrir mais um material, vale perguntar: isso vai me ajudar a entender, decidir ou agir?
+              </p>
+            </div>
+          </div>
+
+          <div class="grid-3">
+            <article class="card hover-lift">
+              <h3 class="card-title">Entender</h3>
+              <p class="card-description">
+                Use guias e glossários quando o problema for falta de clareza.
+              </p>
+            </article>
+
+            <article class="card hover-lift">
+              <h3 class="card-title">Decidir</h3>
+              <p class="card-description">
+                Use mapas e estruturas quando o problema for excesso de possibilidades.
+              </p>
+            </article>
+
+            <article class="card hover-lift">
+              <h3 class="card-title">Agir</h3>
+              <p class="card-description">
+                Use modelos quando o problema for sair da teoria e começar a se mover.
+              </p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="cta-section">
-      <div class="container cta-box">
-        <div>
-          <span class="section-kicker">Próximo passo</span>
-          <h2>Com recursos em mãos, continue aprofundando sua direção.</h2>
-          <p>
-            Agora você pode voltar para descoberta, revisar caminhos ou retomar as áreas
-            com uma leitura ainda mais clara do que faz sentido para você.
-          </p>
+      <div class="container">
+        <div class="cta-box reveal-zoom">
+          <div>
+            <span class="section-kicker">Próximo passo</span>
+            <h2>Depois dos recursos, aproxime-se do ecossistema e da troca com outras pessoas.</h2>
+            <p>
+              Agora o próximo movimento é conhecer comunidades, grupos, iniciativas e espaços que ajudam a sair do estudo isolado.
+            </p>
+          </div>
+
+          <div class="inline-actions">
+            <a class="btn btn-primary" href="./communities.html">Ver comunidades</a>
+            <a class="btn btn-secondary" href="./about.html">Ver sobre o projeto</a>
+          </div>
         </div>
-        <a class="btn btn-primary" href="./discover.html">Ir para descoberta</a>
       </div>
     </section>
   </main>
@@ -349,15 +437,17 @@ console.log(clareza);</code></pre>
     <div class="container footer-content">
       <div>
         <strong>TechMap</strong>
-        <p>Conectando você a caminhos reais na tecnologia.</p>
+        <p>
+          Conectando você a caminhos reais na tecnologia com mais clareza, contexto e direção.
+        </p>
       </div>
 
       <nav aria-label="Links do rodapé">
         <ul>
+          <li><a href="./tools.html">Ferramentas</a></li>
+          <li><a href="./communities.html">Comunidades</a></li>
           <li><a href="./about.html">Sobre</a></li>
-          <li><a href="./career-areas.html">Áreas</a></li>
-          <li><a href="./career-paths.html">Caminhos</a></li>
-          <li><a href="./study-guide.html">Estudos</a></li>
+          <li><a href="../index.html">Início</a></li>
         </ul>
       </nav>
     </div>

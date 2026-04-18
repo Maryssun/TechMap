@@ -1,137 +1,196 @@
 /* =====================================================
-   TechMap - Discover (Questionário Inteligente)
+   TechMap - Discover
+   Questionário de descoberta com recomendação de áreas
    ===================================================== */
 
-let currentStep = 0;
-let answers = [];
-let questions = [];
+let discoverQuestions = [];
+let discoverAnswers = [];
+let discoverCurrentIndex = 0;
+let discoverAreas = [];
 
-document.addEventListener("DOMContentLoaded", initDiscover);
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.body.dataset.page !== "discover") return;
+  initDiscoverPage();
+});
 
-async function initDiscover() {
-  const data = await DataLoader.loadQuestionnaire();
+async function initDiscoverPage() {
+  const questionnaireData = await DataLoader.loadQuestionnaire();
+  const areasData = await DataLoader.loadAreas();
 
-  if (!data || !data.questions) {
-    renderError("Não foi possível carregar o questionário.");
+  if (!questionnaireData || !Array.isArray(questionnaireData.questions) || !areasData) {
+    renderDiscoverError("Não foi possível carregar o questionário agora.");
     return;
   }
 
-  questions = data.questions;
-  renderQuestion();
+  discoverQuestions = questionnaireData.questions;
+  discoverAreas = areasData;
+  discoverAnswers = [];
+  discoverCurrentIndex = 0;
+
+  renderDiscoverQuestion();
 }
 
-/* =============================
-   RENDER PERGUNTA
-   ============================= */
+function renderDiscoverQuestion() {
+  const questionWrapper = document.getElementById("discover-questionnaire");
+  const progressWrapper = document.getElementById("discover-progress");
 
-function renderQuestion() {
-  const container = document.getElementById("question-container");
-  const progress = document.getElementById("progress");
+  if (!questionWrapper || !progressWrapper) return;
 
-  if (!container) return;
+  const question = discoverQuestions[discoverCurrentIndex];
+  if (!question) return;
 
-  const question = questions[currentStep];
-
-  progress.textContent = `Pergunta ${currentStep + 1} de ${questions.length}`;
-
-  container.innerHTML = `
-    <h2>${question.pergunta}</h2>
-    <div class="stack-md">
-      ${question.opcoes.map((op, index) => `
-        <button class="btn btn-secondary option-btn" data-index="${index}">
-          ${op.texto}
-        </button>
-      `).join("")}
+  progressWrapper.innerHTML = `
+    <div class="inline-actions">
+      <span class="badge badge-primary">Pergunta ${discoverCurrentIndex + 1} de ${discoverQuestions.length}</span>
+      <span class="badge">${Math.round(((discoverCurrentIndex + 1) / discoverQuestions.length) * 100)}% concluído</span>
     </div>
   `;
 
-  document.querySelectorAll(".option-btn").forEach(btn => {
-    btn.addEventListener("click", handleAnswer);
+  questionWrapper.innerHTML = `
+    <div class="stack-lg">
+      <div class="stack-sm">
+        <h3 class="card-title">${escapeHtml(question.pergunta)}</h3>
+        <p class="card-description">Escolha a opção que mais combina com você neste momento.</p>
+      </div>
+
+      <div class="grid-2" id="discover-options"></div>
+
+      ${
+        discoverCurrentIndex > 0
+          ? `<div class="inline-actions"><button class="btn btn-secondary" id="discover-back-button" type="button">Voltar</button></div>`
+          : ""
+      }
+    </div>
+  `;
+
+  const optionsContainer = document.getElementById("discover-options");
+
+  question.opcoes.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "card hover-lift w-full align-start";
+    button.innerHTML = `
+      <div class="stack-sm">
+        <span class="badge badge-primary">Opção ${index + 1}</span>
+        <strong class="card-title">${escapeHtml(option.texto)}</strong>
+      </div>
+    `;
+    button.addEventListener("click", () => selectDiscoverOption(option.peso));
+    optionsContainer.appendChild(button);
   });
-}
 
-/* =============================
-   RESPOSTA
-   ============================= */
-
-function handleAnswer(e) {
-  const index = e.currentTarget.getAttribute("data-index");
-  const selected = questions[currentStep].opcoes[index];
-
-  answers.push(selected.peso);
-
-  currentStep++;
-
-  if (currentStep >= questions.length) {
-    calculateResult();
-  } else {
-    renderQuestion();
+  const backButton = document.getElementById("discover-back-button");
+  if (backButton) {
+    backButton.addEventListener("click", goBackDiscoverQuestion);
   }
 }
 
-/* =============================
-   RESULTADO
-   ============================= */
+function selectDiscoverOption(weightObject) {
+  discoverAnswers[discoverCurrentIndex] = weightObject;
+  discoverCurrentIndex += 1;
 
-async function calculateResult() {
-  const total = {};
+  if (discoverCurrentIndex >= discoverQuestions.length) {
+    renderDiscoverResult();
+    return;
+  }
 
-  answers.forEach(peso => {
-    Object.keys(peso).forEach(area => {
-      total[area] = (total[area] || 0) + peso[area];
+  renderDiscoverQuestion();
+}
+
+function goBackDiscoverQuestion() {
+  if (discoverCurrentIndex <= 0) return;
+  discoverCurrentIndex -= 1;
+  renderDiscoverQuestion();
+}
+
+function renderDiscoverResult() {
+  const questionWrapper = document.getElementById("discover-questionnaire");
+  const progressWrapper = document.getElementById("discover-progress");
+  if (!questionWrapper || !progressWrapper) return;
+
+  const scoreMap = {};
+
+  discoverAnswers.forEach((answer) => {
+    Object.entries(answer).forEach(([key, value]) => {
+      scoreMap[key] = (scoreMap[key] || 0) + value;
     });
   });
 
-  const sorted = Object.entries(total)
+  const sortedIds = Object.entries(scoreMap)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 3)
-    .map(item => item[0]);
+    .map(([id]) => id);
 
-  const areas = await DataLoader.loadAreas();
+  const recommendedAreas = discoverAreas.filter((area) => sortedIds.includes(area.id));
 
-  const resultAreas = areas.filter(a => sorted.includes(a.id));
+  progressWrapper.innerHTML = `
+    <div class="inline-actions">
+      <span class="badge badge-success">Questionário concluído</span>
+      <span class="badge">Resultado pronto</span>
+    </div>
+  `;
 
-  renderResult(resultAreas);
+  questionWrapper.innerHTML = `
+    <div class="stack-lg">
+      <div class="stack-sm">
+        <h3 class="card-title">Seu resultado</h3>
+        <p class="card-description">
+          Com base nas suas respostas, estas áreas parecem mais compatíveis com seu perfil atual.
+        </p>
+      </div>
+
+      <div class="grid-3" id="discover-result-grid"></div>
+
+      <div class="inline-actions">
+        <button class="btn btn-secondary" id="discover-restart-button" type="button">Refazer questionário</button>
+        <a class="btn btn-primary" href="./career-areas.html">Explorar todas as áreas</a>
+      </div>
+    </div>
+  `;
+
+  const grid = document.getElementById("discover-result-grid");
+
+  recommendedAreas.forEach((area) => {
+    const card = document.createElement("article");
+    card.className = "area-card card hover-lift";
+    card.innerHTML = `
+      <div class="stack-sm">
+        <span class="badge badge-primary">Área sugerida</span>
+        <h4 class="card-title">${escapeHtml(area.nome)}</h4>
+        <p class="card-description">${escapeHtml(area.descricao)}</p>
+      </div>
+      <a class="text-link" href="./area-detail.html?id=${encodeURIComponent(area.id)}">Ver detalhes da área</a>
+    `;
+    grid.appendChild(card);
+  });
+
+  const restartButton = document.getElementById("discover-restart-button");
+  if (restartButton) {
+    restartButton.addEventListener("click", () => {
+      discoverAnswers = [];
+      discoverCurrentIndex = 0;
+      renderDiscoverQuestion();
+    });
+  }
 }
 
-/* =============================
-   RENDER RESULTADO
-   ============================= */
+function renderDiscoverError(message) {
+  const questionWrapper = document.getElementById("discover-questionnaire");
+  if (!questionWrapper) return;
 
-function renderResult(resultAreas) {
-  const container = document.getElementById("question-container");
-
-  container.innerHTML = `
-    <h2>Seu resultado</h2>
-    <p>Com base nas suas respostas, estes caminhos podem fazer mais sentido:</p>
-
-    <div class="grid-3">
-      ${resultAreas.map(area => `
-        <div class="area-card">
-          <h3>${area.nome}</h3>
-          <p>${area.descricao}</p>
-          <a class="text-link" href="./area-detail.html?id=${area.id}">
-            Ver detalhes
-          </a>
-        </div>
-      `).join("")}
-    </div>
-
-    <div style="margin-top: 24px;">
-      <a class="btn btn-primary" href="./career-areas.html">
-        Ver todas as áreas
-      </a>
+  questionWrapper.innerHTML = `
+    <div class="empty-state">
+      <strong>Erro</strong>
+      <p>${escapeHtml(message)}</p>
     </div>
   `;
 }
 
-/* =============================
-   ERRO
-   ============================= */
-
-function renderError(message) {
-  const container = document.getElementById("question-container");
-  if (!container) return;
-
-  container.innerHTML = `<div class="empty-state">${message}</div>`;
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
